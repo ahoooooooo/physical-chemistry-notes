@@ -25,12 +25,12 @@ tags:
 
 - 若 $\lambda < d$，wave is transmitted。
 - 若 $\lambda \approx d$，wave is diffracted。
-- 若 $\lambda \approx \delta$，wave is diffracted。
+- 若 $\lambda \approx \sigma$，wave is diffracted。
 
 其中：
 
-- $d$：推測代表結構間距、孔徑或障礙物的特徵尺度。
-- $\delta$：字跡與符號不夠清楚，推測代表單一粒子、障礙物或孔洞的尺寸。
+- $d$：粒子之間的距離（相鄰散射中心的間距）。
+- $\sigma$：粒子本身的直徑。
 
 ### 1.1 Core Idea
 
@@ -44,18 +44,9 @@ tags:
 
 > 繞射通常在波長和障礙物 / 孔徑尺寸可相比時最明顯。
 
-### 1.2 Diagram Notes
+### 1.2 Limitation of This Classification
 
-原頁中間畫了一排圓形物體：
-
-- 上方粉紅色箭頭標了 $d$，看起來是在表示相鄰物體間距。
-- 左側第一個圓內有橘色記號，推測是在表示單一散射體或孔洞的特徵尺寸 $\delta$。
-
-因此這段應該是在說：當波長與障礙物尺寸、孔徑或結構間距接近時，容易產生 diffraction。
-
-### 1.3 Limitation of This Classification
-
-原筆記把波的行為簡化成 $\lambda<d$ 時 transmitted、$\lambda\approx d$ 或 $\lambda\approx\delta$ 時 diffracted。這可以拿來抓大方向，但不能當成絕對規則。
+原筆記把波的行為簡化成 $\lambda<d$ 時 transmitted、$\lambda\approx d$ 或 $\lambda\approx\sigma$ 時 diffracted。這可以拿來抓大方向，但不能當成絕對規則。
 
 真實情況還會受到下列因素影響：
 
