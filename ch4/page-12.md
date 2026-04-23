@@ -282,6 +282,19 @@ $$
 - Wavelength 不是 continuous。
 - Spectrum 會是一條一條的 line spectrum，而不是 continuous spectrum。
 
+## 8. Hydrogen Visible Spectrum (Balmer Lines)
+
+原筆記底部畫出 gas discharge tube、slits、prism 產生的 hydrogen spectrum，並標出四條落在可見光範圍的 Balmer series 譜線（$n_2\to n_1=2$）：
+
+| Transition | Wavelength | Color |
+| --- | --- | --- |
+| $n=6\to 2$ | $410.0\ \text{nm}$ | blue violet |
+| $n=5\to 2$ | $434.0\ \text{nm}$ | blue violet |
+| $n=4\to 2$ | $486.1\ \text{nm}$ | blue green |
+| $n=3\to 2$ | $656.2\ \text{nm}$ | red |
+
+這四條線就是 hydrogen 在玻璃放電管中常見的「紅、藍綠、藍紫、紫」色特徵光。
+
 ## Key Formulas
 
 ### Potential Energy

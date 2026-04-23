@@ -96,6 +96,30 @@ $$
 
 因此 line spectrum 是 discrete，而不是 continuous。
 
+### 2.1 Named Spectral Series
+
+原頁左上畫出 hydrogen energy level diagram，依 lower level $n_1$ 分成五個 named series：
+
+| Series | $n_1$ | Spectral Region |
+| --- | --- | --- |
+| Lyman | 1 | Ultraviolet |
+| Balmer | 2 | Visible |
+| Paschen | 3 | Infrared |
+| Brackett | 4 | Far infrared |
+| Pfund | 5 | Far infrared |
+
+圖中也標出各 level 的能量值（單位 $10^{-19}\ \text{J}$）：
+
+$$
+E_1\approx -21.76,\quad
+E_2\approx -5.43,\quad
+E_3\approx -2.42,\quad
+E_4\approx -1.36,\quad
+E_5\approx -0.87
+$$
+
+這些能量值和 $E_n=-13.6/n^2\ \text{eV}$ 換算後的結果一致，因為 $1\ \text{eV}=1.60\times10^{-19}\ \text{J}$。
+
 ## 3. Electronic Transition and Spectral Lines
 
 當 electron 在兩個 energy states 之間 transition 時：
