@@ -308,12 +308,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. 不要把 $p=h/\lambda$ 和 $\lambda=h/p$ 背混；兩者是同一關係的不同寫法。
-2. 100 V electron example 先用 $E_k=eV$ 算 kinetic energy。
-3. 這題算出 $u\approx c/50$，所以 non-relativistic approximation 合理。
-4. $\lambda\approx1.23\times10^{-10}\ \text{m}$ 的意義是它和 atomic size 同量級。
-5. Humans 的 $\lambda\sim10^{-36}\ \text{m}$ 是量級說明，不是所有人固定同一數值。
-6. Electron diffraction 是 electron wave nature 的直接實驗證據。
-

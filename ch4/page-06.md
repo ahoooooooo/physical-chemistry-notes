@@ -238,11 +238,3 @@ $$
 E=\sum_n N_n\varepsilon_n
 $$
 
-## Common Mistakes
-
-1. 不要把 $N_n$ 當成能量；$N_n$ 是第 $n$ 能階上的 oscillator 數目。
-2. $\varepsilon_n=nh\nu$ 是 Planck 的能量量子化假設。
-3. Boltzmann distribution 用來描述 population ratio，不是說能量本身 obey Boltzmann。
-4. 要能看出 $N=N_0(1+x+x^2+\cdots)$ 是 geometric series。
-5. 這頁是在為下一頁求 average energy 做準備。
-

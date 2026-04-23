@@ -311,12 +311,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. $q$ 在這裡是 generalized coordinate / position coordinate，不是 charge。
-2. $\Delta q\,\Delta p\sim h$ 是直觀量級估算，不是標準精確公式。
-3. 標準 position-momentum uncertainty 是 $\Delta x\,\Delta p_x\ge\hbar/2=h/(4\pi)$。
-4. Position-velocity 形式使用 $p=mu$，只適合 non-relativistic case。
-5. Energy-time relation 和 position-momentum relation 的詮釋不完全相同，但課堂層次通常用同樣形式。
-6. "The order of measurement matters" 背後是在講 non-commuting operators。
-

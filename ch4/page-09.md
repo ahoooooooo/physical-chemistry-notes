@@ -238,12 +238,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. 不要把 $\nu_0$ 看成 $V_0$；這裡是 threshold frequency，不是 voltage。
-2. 原筆記的 $W$ 應理解為 work function，較標準符號是 $\phi$。
-3. Intensity 不決定單個 electron 的 maximum kinetic energy；frequency 才決定。
-4. Intensity 主要決定 photoelectrons 的數目。
-5. 真正線性增加的是 maximum kinetic energy $K_{\max}$，不是每個 electron 都一定有同一 kinetic energy。
-6. "Suitable radiation" 指的是 frequency 足夠高，使 $h\nu\ge \phi$。
-

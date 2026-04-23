@@ -293,11 +293,3 @@ $$
 j^*=\sigma T^4
 $$
 
-## Common Mistakes
-
-1. 不要把 total radiation energy density $u(T)$ 和 emitted power per unit area $j^*$ 混在一起。
-2. $T^4$ result 是從 $\rho_\nu$ 對所有 frequency 積分而來，不是憑空出現。
-3. Quantum theory 回到 classical theory 的條件是 $h\nu\ll k_B T$。
-4. Classical mean energy $k_B T$ 和 Planck average energy $h\nu/[e^{h\nu/(k_B T)}-1]$ 不要混淆。
-5. Classical theory 假設 energy continuous；Planck theory 假設 energy discrete。
-

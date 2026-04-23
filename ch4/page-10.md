@@ -350,12 +350,3 @@ p_{\text{photon}}=\frac{h}{\lambda}
 }
 $$
 
-## Common Mistakes
-
-1. 原筆記的 $W$ 應理解為 work function $\phi$，不要只當成普通 potential energy。
-2. 前半數值計算是在算 potassium 的 photoelectron speed。
-3. Compton effect 的重點不是單純 scattering，而是 scattered photon 的 wavelength 變長。
-4. Compton effect 必須同時 obey conservation of energy 和 conservation of momentum。
-5. Photon 除了有 energy $h\nu$，也有 momentum $h/\lambda$。
-6. X-ray 常用於 Compton effect，是因為 X-ray wavelength 短、photon momentum 大，wavelength shift 較容易觀察。
-

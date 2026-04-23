@@ -330,11 +330,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. $R_H$ 的單位是 $\text{m}^{-1}$，因為它是 wavenumber constant。
-2. Rydberg-Ritz equation 中要滿足 $n_2>n_1$。
-3. 不要把 Bohr model 的成功和限制混在一起；它能處理 H-like spectra，但不能完整處理 fine structure 和 multi-electron atoms。
-4. 相對論式子要寫成 $E^2=p^2c^2+m_0^2c^4$，對 photon 因 $m_0=0$ 才化為 $E=pc$。
-5. 這頁是在從 Bohr orbit model 過渡到真正 quantum mechanics 的 matter-wave picture。
-

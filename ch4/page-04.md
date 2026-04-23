@@ -154,11 +154,3 @@ Blackbody radiation 是黑體在 thermodynamic equilibrium 下所放出的輻射
 
 Blackbody radiation 的 spectrum 與 intensity 只與 temperature 有關，與 material 無關。
 
-## Common Mistakes
-
-1. 不要把 $\lambda$ 與尺寸關係當成絕對定律；這只是簡化分類。
-2. $\delta$ 在原筆記中沒有明確定義，只能推測為某種特徵尺寸。
-3. "Equal in intensity" 應理解為熱平衡下整體吸收與放射達成平衡，不是每個方向、頻率、瞬間都逐一相等。
-4. Blackbody radiation 的核心是 spectrum 和 intensity 只取決於 temperature，而不是 material。
-5. Blackbody 是理想模型，現實物體只能近似。
-

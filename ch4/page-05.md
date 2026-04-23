@@ -200,11 +200,3 @@ $$
 E=h\nu
 $$
 
-## Common Mistakes
-
-1. 不要把 $\rho_\nu$ 當成總能量；它是每單位體積、每單位頻率區間的能量密度。
-2. $E=h\nu$ 是為了解釋 blackbody radiation 而提出的量子化假設，不只是單獨公式。
-3. 圖中的 peak 會隨 temperature 增加而移往較高 frequency。
-4. Blackbody spectrum 有峰值，不是單調增加。
-5. 本頁只是 Planck 推導的開頭，真正的 oscillator energy levels 和 Boltzmann distribution 會在後面展開。
-

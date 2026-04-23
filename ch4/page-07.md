@@ -388,12 +388,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. 不要把 total energy $E$ 和 average energy $\langle\varepsilon\rangle$ 搞混。
-2. $E=\sum N_n\varepsilon_n$ 是 weighted sum，不是單純加總 $N_n$。
-3. Classical limit 來自 $h\nu\ll k_B T$，也就是 low frequency 或 high temperature。
-4. $\frac{8\pi\nu^2}{c^3}$ 是 EM mode density，不是任意常數。
-5. Rayleigh-Jeans equation 不是完全沒用；它在 low-frequency region 是 Planck law 的近似，但在 high-frequency region 失敗。
-6. Ultraviolet catastrophe 指的是 classical prediction 在 high frequency 導致 energy density 發散。
-

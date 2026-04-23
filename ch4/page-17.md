@@ -167,11 +167,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. $\Delta t$ 是 excited state lifetime，不是單純儀器測量時間。
-2. $\Delta E$ 是 transition energy distribution 的寬度，不是單顆 photon 任意亂跳的能量。
-3. Spectral line width 對應 frequency / energy distribution。
-4. 本頁是在應用前一頁的 energy-time uncertainty relation。
-5. Natural broadening 是 finite lifetime 造成的；實際實驗還可能有 Doppler、collision、instrumental broadening。
-

@@ -267,11 +267,3 @@ E_k
 }
 $$
 
-## Common Mistakes
-
-1. 不要把原筆記的 $u$ 和 frequency $\nu$ 混淆；在 Bohr model 中可讀成 electron speed $v$。
-2. $Z$ 是 nuclear charge number，不是 atomic mass。
-3. $r_n=(n^2/Z)a_0$ 來自 Coulomb force = centripetal force 和 angular momentum quantization 的聯立。
-4. $a_0$ 是 hydrogen ground state radius，即 $n=1$、$Z=1$ 時的半徑。
-5. 這頁只先得到 kinetic energy；potential energy 和 total energy 會在下一頁接著處理。
-

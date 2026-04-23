@@ -221,11 +221,3 @@ $$
 y(x,t)=2A\sin(kx)\cos(\omega t)
 $$
 
-## Common Mistakes
-
-1. 原筆記中的 $k=\pi/\lambda$ 很可能少了係數 2，標準定義是 $k=2\pi/\lambda$。
-2. 原筆記中的 $\omega=\pi/T$ 很可能少了係數 2，標準定義是 $\omega=2\pi/T$。
-3. 駐波公式由兩個反向行進波相加而來，結果前面應有 $2A$。
-4. 只記得 $E\perp B$ 不夠，$E$ 與 $B$ 也都垂直於傳播方向。
-5. Traveling wave 會整體傳播；standing wave 是固定空間型態的振動。
-

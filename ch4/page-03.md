@@ -216,11 +216,3 @@ $$
 n=\text{mode number}=\text{number of antinodes}
 $$
 
-## Common Mistakes
-
-1. 不要把 $n$ 誤認為節點數；在這裡 $n$ 是 mode number，也等於腹點數。
-2. $\lambda=2l/n$ 是由 boundary conditions 推出，不是任意假設。
-3. 原筆記的 "electron transmission" 在此應修正為 "electronic transition"。
-4. 頁尾的 $\lambda>d$ 分類不要單獨當作絕對定律，應該和第 4 頁一起看。
-5. 固定端必須滿足 $y=0$，因為固定端不能位移。
-

@@ -229,11 +229,3 @@ $$
 c=3.00\times10^8\ \text{m/s}
 $$
 
-## Common Mistakes
-
-1. 原筆記把 SHM 寫在 conservation of momentum 底下，但這段內容實際上是在講 simple harmonic motion。
-2. "Longtitude" 應修正為 "Longitudinal"。
-3. SHM 的角頻率是 $\omega=\sqrt{k/m}$。
-4. $\vec{F}=-\nabla E_p$ 是保守力與位能的關係，不是完整的能量守恆式。
-5. 在 SHM / wave 情境中，$\omega$ 較精確的名稱是 angular frequency，而不是 angular velocity。
-

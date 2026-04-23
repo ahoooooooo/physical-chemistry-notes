@@ -228,12 +228,3 @@ $$
 }
 $$
 
-## Common Mistakes
-
-1. 不要把 standing wave condition 和 Bohr angular momentum quantization 當成無關公式；兩者可由 de Broglie relation 連起來。
-2. 原筆記的 $u$ 是 electron speed，可視為 $v$。
-3. Short wavelength photon 有較好的 position resolution，但也有較大 momentum，會更強烈擾動 electron。
-4. Long wavelength photon 對 electron momentum 擾動較小，但 position resolution 較差。
-5. Heisenberg uncertainty principle 是本質限制，不只是儀器不夠精密。
-6. 這頁的 thought experiment 要和 photon momentum $p=h/\lambda$ 連起來理解。
-

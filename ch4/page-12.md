@@ -368,12 +368,3 @@ R_H Z^2
 }
 $$
 
-## Common Mistakes
-
-1. 不要漏掉 potential energy 的負號。
-2. Energy level $E_n$ 是 negative，但 ionization energy 是 positive。
-3. $E_n\propto -1/n^2$ 表示 $n$ 越大，energy 越接近 0。
-4. 寫 photon energy 時要注意 upper 和 lower energy level 的順序，避免符號錯誤。
-5. Bohr model 可精確處理 H-like atoms；若提到 He，通常應理解為 He$^+$，不是中性 He。
-6. Line spectrum 來自 discrete energy levels，不是 continuous energy distribution。
-
