@@ -175,9 +175,3 @@ $$
 4. 本頁是在應用前一頁的 energy-time uncertainty relation。
 5. Natural broadening 是 finite lifetime 造成的；實際實驗還可能有 Doppler、collision、instrumental broadening。
 
-## Original Page Notes
-
-- 原頁標題為 application: observed widths of spectral lines。
-- 原頁寫 electron transition from an electronically excited state。
-- 原頁寫 short lifetime leads to small $\Delta t$ and large $\Delta E$。
-- 原頁結論為 broadened spectral line。

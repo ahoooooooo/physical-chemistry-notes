@@ -224,12 +224,3 @@ $$
 4. 頁尾的 $\lambda>d$ 分類不要單獨當作絕對定律，應該和第 4 頁一起看。
 5. 固定端必須滿足 $y=0$，因為固定端不能位移。
 
-## Original Page Notes
-
-- 原頁上方標題為 B.C.，代表 boundary conditions。
-- 原頁畫出 $n=1$ 與 $n=2$ 的 standing wave 模式。
-- 原頁寫出 $x=0,\ y=0$ 與 $x=l,\ y=0$。
-- 原頁推導出 $\sin(2\pi l/\lambda)=0$、$2\pi l/\lambda=n\pi$、$\lambda=2l/n$。
-- 原頁標註 quantization of standing wave。
-- 原頁寫到 $n$ 是 number of antinodes 與 modes of vibration。
-- 原頁後半開始整理 EM radiation 打到物體後可能出現的現象。

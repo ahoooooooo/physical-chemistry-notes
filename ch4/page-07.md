@@ -397,14 +397,3 @@ $$
 5. Rayleigh-Jeans equation 不是完全沒用；它在 low-frequency region 是 Planck law 的近似，但在 high-frequency region 失敗。
 6. Ultraviolet catastrophe 指的是 classical prediction 在 high frequency 導致 energy density 發散。
 
-## Original Page Notes
-
-- 原頁第 8 點為 total energy of the oscillators。
-- 原頁寫出 $E=\sum_n N_n\varepsilon_n$。
-- 原頁利用 $x=e^{-h\nu/(k_B T)}$ 與 $x+2x^2+3x^3+\cdots=x/(1-x)^2$。
-- 原頁第 9 點為 average energy per oscillator，並框起 $\langle\varepsilon\rangle=h\nu/[e^{h\nu/(k_B T)}-1]$。
-- 原頁標註 $h\nu\ll k_BT$ 時 $\langle\varepsilon\rangle\approx k_BT$，稱為 classical limit。
-- 原頁第 10 點為 radiant energy density。
-- 原頁寫出 Planck radiation law 和 Rayleigh-Jeans equation。
-- 原頁右下標示 Rayleigh-Jeans equation、ultraviolet catastrophe 和 Planck's result。
-- 原頁底部有 Rayleigh-Jeans curve 與 Planck curve 的對比圖。

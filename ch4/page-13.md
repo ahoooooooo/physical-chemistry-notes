@@ -314,16 +314,3 @@ $$
 4. 相對論式子要寫成 $E^2=p^2c^2+m_0^2c^4$，對 photon 因 $m_0=0$ 才化為 $E=pc$。
 5. 這頁是在從 Bohr orbit model 過渡到真正 quantum mechanics 的 matter-wave picture。
 
-## Original Page Notes
-
-- 原頁寫 Rydberg-Ritz equation：$1/\lambda=R_H(1/n_1^2-1/n_2^2)$。
-- 原頁旁註 Balmer-Rydberg-Ritz equation。
-- 原頁寫 $R_H=109.7\times10^5\ \text{m}^{-1}$。
-- 原頁列出 $n_1=1,2,3,\dots$，$n_2=n_1+1,n_1+2,n_1+3,\dots$。
-- 原頁寫 electronic transition between two energy states leads to spectral line with wavelength $\lambda$。
-- 原頁列出 Bohr model 的問題：fails to describe fine structures；isn't applicable to atoms with more electrons。
-- 原頁後半開始 The Foundations of QM。
-- 原頁小節為 The wave nature of electrons。
-- 原頁提到 de Broglie (1924), Nobel Prize。
-- 原頁寫 particles such as electrons can also have wave properties。
-- 原頁寫相對論關係 $E^2=p^2c^2+m_0^2c^4$，並註記 photons in free space have zero rest mass。

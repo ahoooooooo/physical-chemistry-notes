@@ -208,13 +208,3 @@ $$
 4. Blackbody spectrum 有峰值，不是單調增加。
 5. 本頁只是 Planck 推導的開頭，真正的 oscillator energy levels 和 Boltzmann distribution 會在後面展開。
 
-## Original Page Notes
-
-- 原頁上半部有 radiant energy density 對 frequency 的圖。
-- 圖中標示多條不同溫度曲線，例如 $3500\ \text{K}$、$4000\ \text{K}$、$5000\ \text{K}$、$5500\ \text{K}$。
-- 原頁寫出 Planck's empirical formula：$\rho_\nu=\alpha\nu^3/[\exp(\beta\nu/T)-1]$。
-- 原頁定義 $\rho_\nu$ 為 frequency $\nu$ 附近、per unit volume、per unit frequency range 的 energy density。
-- 原頁開始 Planck's derivation in terms of vibration of atoms。
-- 原頁提到 Planck's quantization hypothesis (1900) 與 Nobel Prize (1918)。
-- 原頁提到 radiation energy is transmitted in small packets，packets of energy $h\nu$。
-- 原頁最後寫到 heated atoms 的 vibration increase，以及 all atoms have the same fundamental vibrational ...，句子未完成。

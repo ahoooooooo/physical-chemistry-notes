@@ -227,8 +227,3 @@ $$
 4. $\vec{F}=-\nabla E_p$ 是保守力與位能的關係，不是完整的能量守恆式。
 5. 在 SHM / wave 情境中，$\omega$ 較精確的名稱是 angular frequency，而不是 angular velocity。
 
-## Original Page Notes
-
-- 原始標題：Ch. 4 Quantum Theory (Text Ch. 11)
-- 原始小節包含 particle mechanics property、wave mechanics properties of wave。
-- 右側有彈簧振動示意圖，用來表示 SHM 的位移隨時間變化。

@@ -162,12 +162,3 @@ Blackbody radiation 的 spectrum 與 intensity 只與 temperature 有關，與 m
 4. Blackbody radiation 的核心是 spectrum 和 intensity 只取決於 temperature，而不是 material。
 5. Blackbody 是理想模型，現實物體只能近似。
 
-## Original Page Notes
-
-- 原頁前半承接上一頁的 some properties of EM radiations。
-- 原頁列出 $\lambda<d$ 時 wave is transmitted。
-- 原頁列出 $\lambda\approx d$ 與 $\lambda\approx\delta$ 時 wave is diffracted。
-- 原頁中間有一排圓形物體與標記 $d$、$\delta$ 的圖示。
-- 原頁後半開始 Blackbody Radiation。
-- 原頁定義 blackbody 為 absorbs all radiation falling on it, regardless of frequency or angle of incidence。
-- 原頁指出 blackbody radiation 的 spectrum 和 intensity 只取決於 body temperature，與 material 無關。

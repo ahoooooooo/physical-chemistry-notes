@@ -229,11 +229,3 @@ $$
 4. 只記得 $E\perp B$ 不夠，$E$ 與 $B$ 也都垂直於傳播方向。
 5. Traveling wave 會整體傳播；standing wave 是固定空間型態的振動。
 
-## Original Page Notes
-
-- 原頁承接上一頁的 electromagnetic radiation。
-- 原頁提到 EM radiation can be transmitted without medium。
-- 原頁提到 electric field 與 magnetic field 的 fluctuations at right angles to one another。
-- 原頁左上有電磁波示意圖，標出 $E$、$H$、$x$ 方向與 $\lambda$。
-- 原頁 traveling wave 區塊提到對弦施加 fixed frequency vertical oscillation。
-- 原頁 standing wave 區塊強調 confined space 與 superposition。

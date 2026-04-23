@@ -317,17 +317,3 @@ $$
 5. Humans 的 $\lambda\sim10^{-36}\ \text{m}$ 是量級說明，不是所有人固定同一數值。
 6. Electron diffraction 是 electron wave nature 的直接實驗證據。
 
-## Original Page Notes
-
-- 原頁承接上一頁 photon 的 energy 與 momentum，寫 $E=p_{\text{photon}}c=p_{\text{photon}}\lambda\nu=h\nu$。
-- 原頁推出 $p_{\text{photon}}=h/\lambda$。
-- 原頁寫 suppose this is also true for particles，可定義 $\lambda=h/p=h/mu$。
-- 原頁註記 de Broglie wavelength。
-- 原頁例題為 calculate the de Broglie wavelength of an electron accelerated by a potential of 100 V。
-- 原頁算出 $E_k=eV=1.6\times10^{-17}\ \text{J}$。
-- 原頁用 $E_k=\frac12mu^2$ 算出 $u=5.93\times10^6\ \text{m/s}\approx c/50$。
-- 原頁算出 $\lambda=1.23\times10^{-10}\ \text{m}$。
-- 原頁註記 this is on the order of atomic size。
-- 原頁寫 electrons show wave-like properties at the atomic scale。
-- 原頁提到 G. P. Thomson (1937 Nobel Prize) electron diffraction experiment。
-- 原頁提到 humans 的 wavelength 約 $10^{-36}\ \text{m}$，所以 no perceivable wave-like characteristics。

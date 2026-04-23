@@ -364,15 +364,3 @@ $$
 5. Bohr model 可精確處理 H-like atoms；若提到 He，通常應理解為 He$^+$，不是中性 He。
 6. Line spectrum 來自 discrete energy levels，不是 continuous energy distribution。
 
-## Original Page Notes
-
-- 原頁第 5 點為 potential energy。
-- 原頁寫 $E_p=-\int_r^\infty Ze^2/(4\pi\varepsilon_0r^2)\,dr$。
-- 原頁推出 $E_p=-Ze^2/(4\pi\varepsilon_0r)$。
-- 原頁註記 potential energy 是 negative of the work required to remove the electron from $r$ to infinity。
-- 原頁寫 $E_p=-2E_k$。
-- 原頁第 6 點為 total energy，寫 $E=E_k+E_p$ 與 $E=-E_k$。
-- 原頁旁邊提到 ionization energy。
-- 原頁第 7 點接 implication / wavenumber，寫 $E_2-E_1=h\nu$ 與 $\tilde{\nu}=1/\lambda$。
-- 原頁整理成 Rydberg-type relation，並提到 Rydberg constant。
-- 原頁最後提到 line spectrum of He，依脈絡應理解為 H-like atoms，若是 helium 則應為 He$^+$。

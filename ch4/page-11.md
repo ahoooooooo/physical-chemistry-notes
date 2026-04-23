@@ -275,15 +275,3 @@ $$
 4. $a_0$ 是 hydrogen ground state radius，即 $n=1$、$Z=1$ 時的半徑。
 5. 這頁只先得到 kinetic energy；potential energy 和 total energy 會在下一頁接著處理。
 
-## Original Page Notes
-
-- 原頁最上方寫 wave-particle duality of EM radiation，並列出 blackbody radiation、photoelectric effect、Compton effect。
-- 原頁後半開始 Bohr's Atomic Theory。
-- 原頁第 1 點寫 stationary states in which electrons do not emit energy。
-- 原頁第 2 點寫 angular momentum quantization：$L=I\omega=mur=nh/(2\pi)=n\hbar$。
-- 原頁推出 $u=nh/(2\pi mr)$。
-- 原頁第 3 點討論 H-like atoms，例如 H、He$^+$、Li$^{2+}$、Be$^{3+}$。
-- 原頁寫 Coulomb force = centripetal force：$Ze^2/(4\pi\varepsilon_0r^2)=mu^2/r$。
-- 原頁推出 $r_n=4\pi\varepsilon_0n^2\hbar^2/(mZe^2)$ 與 $r_n=(n^2/Z)a_0$。
-- 原頁註記 $a_0=0.53\ \text{Å}$。
-- 原頁第 4 點開始 kinetic energy，寫出 $E_k=\frac12mu^2$ 並推出 $E_k=Ze^2/(8\pi\varepsilon_0r)$。

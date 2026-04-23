@@ -247,13 +247,3 @@ $$
 5. 真正線性增加的是 maximum kinetic energy $K_{\max}$，不是每個 electron 都一定有同一 kinetic energy。
 6. "Suitable radiation" 指的是 frequency 足夠高，使 $h\nu\ge \phi$。
 
-## Original Page Notes
-
-- 原頁標題為 Einstein's Photoelectric Effect。
-- 原頁寫 evidence for the quantization of radiation。
-- 原頁觀察到 suitable radiation 落在 metal surface 上時，electrons are emitted。
-- 原頁列出 no electrons if $\nu<\nu_0$，其中 $\nu_0$ 是 threshold frequency。
-- 原頁列出 electron kinetic energy increases with $\nu$ but is independent of light intensity。
-- 原頁列出 number of photoelectrons is proportional to light intensity。
-- 原頁下方寫出 $E_{\text{photon}}=h\nu$、$h\nu=\frac12mv^2+W$、$W=h\nu_0$。
-- 原頁註解 $h\nu$ 是 photon energy，$\frac12mv^2$ 是 electron leaving the metal 的 kinetic energy，$W$ 是把 electron 移出所需能量。

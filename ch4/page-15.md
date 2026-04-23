@@ -237,15 +237,3 @@ $$
 5. Heisenberg uncertainty principle 是本質限制，不只是儀器不夠精密。
 6. 這頁的 thought experiment 要和 photon momentum $p=h/\lambda$ 連起來理解。
 
-## Original Page Notes
-
-- 原頁標題為 interpretation of Bohr's hypothesis of stationary orbit。
-- 原頁寫 $L=nh/(2\pi)=mur$。
-- 原頁寫 if an electron is moving in a Bohr orbit of radius $r$，standing wave will form only if $2\pi r=n\lambda$。
-- 原頁配合 $\lambda=h/p=h/mu$ 推出 $mur=nh/(2\pi)$。
-- 原頁後半標題為 Heisenberg Uncertainty Principle。
-- 原頁註記 thought experiment (1926)。
-- 原頁寫 it would be impossible to make accurate measurements for both position and momentum of a small particle at the same time。
-- 原頁描述 experimenter tries to measure both position and momentum of an electron by shooting a photon on it。
-- 原頁左右對照 position 與 momentum：position 需要 short $\lambda$ radiation / high $\nu$ photons；momentum 則使用 low $\nu$ photons / long $\lambda$ radiation。
-- 原頁底部意思是短波長光使位置較準但改變 electron momentum，長波長光擾動較小但 position 不準。

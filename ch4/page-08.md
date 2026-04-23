@@ -301,12 +301,3 @@ $$
 4. Classical mean energy $k_B T$ 和 Planck average energy $h\nu/[e^{h\nu/(k_B T)}-1]$ 不要混淆。
 5. Classical theory 假設 energy continuous；Planck theory 假設 energy discrete。
 
-## Original Page Notes
-
-- 原頁標題句為 quantum theory reduces to classical theory at low frequency or high temperature。
-- 原頁 classical viewpoint 寫到 all possible energies are allowed，即 continuous distribution of vibrational energies。
-- 原頁 classical viewpoint 寫到 every oscillator has mean energy $k_B T$，並註記 equipartition。
-- 原頁 Planck's proposal 寫到 permitted energies of EM oscillator are integer multiples of $h\nu$，即 $nh\nu$。
-- 原頁 Planck's proposal 寫到 distribution of oscillators follows Boltzmann distribution。
-- 原頁下方寫 radiation energy：$E(T)=\int \rho_\nu(\nu)\,d\nu$。
-- 原頁給出積分結果 $\frac{8\pi^5}{15(hc)^3}(k_B T)^4$，並標註 Stefan-Boltzmann law。

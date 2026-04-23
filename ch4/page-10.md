@@ -359,16 +359,3 @@ $$
 5. Photon 除了有 energy $h\nu$，也有 momentum $h/\lambda$。
 6. X-ray 常用於 Compton effect，是因為 X-ray wavelength 短、photon momentum 大，wavelength shift 較容易觀察。
 
-## Original Page Notes
-
-- 原頁承接 photoelectric effect，補充 $W$ 是移出 electron 所需能量，$m$ 是 electron mass。
-- 原頁列出 $m_e=9.1\times10^{-31}\ \text{kg}$。
-- 原頁列出 $1\ \text{eV}=1.6\times10^{-19}\ \text{J}$。
-- 原頁給出 $\lambda=550\ \text{nm}$。
-- 原頁提到 potassium 的 work function 約 $2.0\ \text{eV}$。
-- 原頁計算結果約為 $u=2.96\times10^5\ \text{m/s}$。
-- 原頁後半標題為 Compton Effect。
-- 原頁寫 X-ray scattering (1923), Nobel prize (1929)。
-- 原頁觀察到 scattered light has slightly longer wavelength, lower frequency, indicating a loss of energy。
-- 原頁寫 radiations are treated as particles called photons，並 obey conservation of energy and momentum。
-- 原頁圖示包含 incident photon、target electron、scattered photon、recoil electron，並標出 $\lambda_f>\lambda_i$。

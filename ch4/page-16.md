@@ -320,14 +320,3 @@ $$
 5. Energy-time relation 和 position-momentum relation 的詮釋不完全相同，但課堂層次通常用同樣形式。
 6. "The order of measurement matters" 背後是在講 non-commuting operators。
 
-## Original Page Notes
-
-- 原頁標題句為 wave-particle duality leads to the Heisenberg uncertainty principle。
-- 原頁寫 $\Delta q\sim\lambda$，$\Delta p\sim h/\lambda$。
-- 原頁寫 $\Delta q\Delta p\sim h$，並框出 $\Delta q\Delta p\ge h/(4\pi)$。
-- 原頁接著寫 $p=mu$，因此 $\Delta q\Delta u\ge h/(4\pi m)$。
-- 原頁寫 energy-time relation：$\Delta E\Delta t\ge h/(4\pi)$。
-- 原頁旁邊推導含 $E=\frac12mu^2=p^2/(2m)$、$dE=(p\,dp)/m=u\,dp$、$\Delta q/u=\Delta t$。
-- 原頁寫 angle and angular momentum：$\Delta\phi\Delta L\ge h/(4\pi)$。
-- 原頁下方畫 $x,y,z$ 三軸、角度 $\phi$ 與 $L_z$ 示意圖。
-- 原頁最後寫 The order of measurement matters!

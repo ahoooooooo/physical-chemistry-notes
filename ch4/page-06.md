@@ -246,12 +246,3 @@ $$
 4. 要能看出 $N=N_0(1+x+x^2+\cdots)$ 是 geometric series。
 5. 這頁是在為下一頁求 average energy 做準備。
 
-## Original Page Notes
-
-- 原頁承接上一頁，寫到 all atoms have the same fundamental vibrational frequency $\nu$。
-- 原頁寫到 available energy states are not continuous but $nh\nu$。
-- 原頁列出 $N_0$、$N_1$、$N_2$ 分別對應 $\varepsilon_0=0h\nu$、$\varepsilon_1=1h\nu$、$\varepsilon_2=2h\nu$。
-- 原頁用 Boltzmann equation 寫出 $N_1/N_0$ 與 $N_n/N_0$。
-- 原頁推導 total number of oscillators：$N=\sum_n N_n$。
-- 原頁使用 geometric series 得到 $N=N_0/[1-e^{-h\nu/(k_B T)}]$。
-- 原頁橘色補充了 $1+x+x^2+\cdots=1/(1-x)$，以及下一頁會用到的 related series。
