@@ -1,11 +1,5 @@
 window.UNITS_DATA = [
   {
-    id: "unit-1",
-    title: "單元一",
-    subtitle: "（待補）",
-    placeholder: true
-  },
-  {
     id: "unit-2",
     title: "單元二",
     subtitle: "Ch.4 Quantum Theory",
@@ -45,6 +39,12 @@ window.UNITS_DATA = [
   {
     id: "unit-3",
     title: "單元三",
+    subtitle: "（待補）",
+    placeholder: true
+  },
+  {
+    id: "unit-4",
+    title: "單元四",
     subtitle: "（待補）",
     placeholder: true
   },
