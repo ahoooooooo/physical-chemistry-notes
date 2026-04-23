@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Physical Chemistry Notes — Ch.4 Quantum Theory</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [["$", "$"]],
+          displayMath: [["$$", "$$"]],
+          processEscapes: true
+        },
+        svg: { fontCache: "global" }
+      };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <aside class="sidebar" aria-label="Chapter navigation">
+        <div class="brand">
+          <span class="brand-kicker">Physical Chemistry</span>
+          <h1>Ch.4 Quantum Theory</h1>
+        </div>
+
+        <label class="search-box">
+          <span>Search notes</span>
+          <input id="searchInput" type="search" placeholder="blackbody, Bohr, ΔE..." />
+        </label>
+
+        <nav id="pageNav" class="page-nav"></nav>
+      </aside>
+
+      <main class="reader">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Text Chapter 11</p>
+            <h2 id="heroTitle">Quantum Theory</h2>
+            <p id="heroSummary">
+              From classical waves to quantum mechanics: blackbody radiation, photons, Bohr model, matter waves, and uncertainty.
+            </p>
+          </div>
+          <div class="hero-card">
+            <span id="pageCounter">17 pages</span>
+            <strong>Concept-first notes</strong>
+            <small>Formulas, common mistakes, and original-page anchors are preserved.</small>
+          </div>
+        </header>
+
+        <section id="searchResults" class="search-results" hidden></section>
+
+        <article id="noteContent" class="note-content"></article>
+      </main>
+
+      <aside class="toc-panel" aria-label="Current page outline">
+        <div class="toc-card">
+          <p class="toc-title">On This Page</p>
+          <nav id="tocNav"></nav>
+        </div>
+        <div class="formula-card">
+          <p class="toc-title">Focus</p>
+          <div id="focusBox">Select a page to view its key sections.</div>
+        </div>
+      </aside>
+    </div>
+
+    <script src="notes-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
