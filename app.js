@@ -241,7 +241,11 @@ for (const unit of units) {
 }
 
 function resolveInitialSub() {
-  if (state.currentSubId && subById.has(state.currentSubId)) return state.currentSubId;
+  let id = state.currentSubId;
+  if (id && id.startsWith("u2-") && !subById.has(id)) {
+    id = id.replace(/^u2-/, "u4-");
+  }
+  if (id && subById.has(id)) return id;
   if (state.legacyPageSlug) {
     const found = subs.find((s) => s.pages.includes(state.legacyPageSlug));
     if (found) return found.id;
