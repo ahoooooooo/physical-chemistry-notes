@@ -1,7 +1,11 @@
 const notes = window.NOTES_DATA || [];
+const units = window.UNITS_DATA || [];
 
+const params = new URLSearchParams(location.search);
 const state = {
-  currentSlug: new URLSearchParams(location.search).get("page") || "page-01",
+  currentSubId: params.get("sub") || null,
+  currentPlaceholderId: null,
+  legacyPageSlug: params.get("page") || null,
   query: ""
 };
 
@@ -83,6 +87,8 @@ function markdownToHtml(markdown) {
   const html = [];
   let listType = null;
   let paragraph = [];
+  let inTable = false;
+  let tableBuffer = [];
 
   const flushParagraph = () => {
     if (!paragraph.length) return;
@@ -96,8 +102,49 @@ function markdownToHtml(markdown) {
     listType = null;
   };
 
+  const flushTable = () => {
+    if (!inTable) return;
+    const [header, sep, ...rows] = tableBuffer;
+    const parseRow = (row) =>
+      row
+        .trim()
+        .replace(/^\|/, "")
+        .replace(/\|$/, "")
+        .split("|")
+        .map((c) => c.trim());
+    const headers = parseRow(header);
+    const bodyRows = rows.map(parseRow);
+    html.push(
+      `<table><thead><tr>${headers
+        .map((h) => `<th>${inlineMarkdown(h)}</th>`)
+        .join("")}</tr></thead><tbody>${bodyRows
+        .map(
+          (r) =>
+            `<tr>${r.map((c) => `<td>${inlineMarkdown(c)}</td>`).join("")}</tr>`
+        )
+        .join("")}</tbody></table>`
+    );
+    inTable = false;
+    tableBuffer = [];
+  };
+
   for (const line of lines) {
     const trimmed = line.trim();
+
+    if (/^\|.*\|$/.test(trimmed) && !inTable) {
+      flushParagraph();
+      closeList();
+      inTable = true;
+      tableBuffer.push(trimmed);
+      continue;
+    }
+    if (inTable) {
+      if (/^\|.*\|$/.test(trimmed)) {
+        tableBuffer.push(trimmed);
+        continue;
+      }
+      flushTable();
+    }
 
     if (!trimmed) {
       flushParagraph();
@@ -144,6 +191,7 @@ function markdownToHtml(markdown) {
 
   flushParagraph();
   closeList();
+  flushTable();
 
   return html
     .join("\n")
@@ -169,48 +217,89 @@ function inlineMarkdown(text) {
   return safe.replace(/@@INLINE(\d+)@@/g, (_, index) => mathTokens[Number(index)]);
 }
 
-function getPreparedNotes() {
-  return notes.map((note) => {
-    const parsed = parseFrontmatter(note.content);
-    return {
-      ...note,
-      ...parsed,
-      pageNumber: Number(parsed.meta.page || note.slug.replace(/\D/g, "")),
-      title: parsed.meta.title || note.slug
-    };
-  });
+function prepareNote(raw) {
+  const parsed = parseFrontmatter(raw.content);
+  return {
+    ...raw,
+    ...parsed,
+    pageNumber: Number(parsed.meta.page || raw.slug.replace(/\D/g, "")),
+    title: parsed.meta.title || raw.slug
+  };
 }
 
-const preparedNotes = getPreparedNotes();
+const notesBySlug = new Map(notes.map((n) => [n.slug, prepareNote(n)]));
+
+const subs = [];
+const subById = new Map();
+for (const unit of units) {
+  if (!unit.subs) continue;
+  for (const sub of unit.subs) {
+    const withUnit = { ...sub, unitId: unit.id, unitTitle: unit.title, unitSubtitle: unit.subtitle };
+    subs.push(withUnit);
+    subById.set(sub.id, withUnit);
+  }
+}
+
+function resolveInitialSub() {
+  if (state.currentSubId && subById.has(state.currentSubId)) return state.currentSubId;
+  if (state.legacyPageSlug) {
+    const found = subs.find((s) => s.pages.includes(state.legacyPageSlug));
+    if (found) return found.id;
+  }
+  return subs[0]?.id || null;
+}
+
+state.currentSubId = resolveInitialSub();
 
 function renderNav() {
-  pageNav.innerHTML = preparedNotes
-    .map((note) => {
-      const active = note.slug === state.currentSlug ? " active" : "";
-      const num = String(note.pageNumber).padStart(2, "0");
-      return `
-        <button class="page-link${active}" data-slug="${note.slug}">
-          <strong>Page ${num}</strong>
-          <small>${escapeHtml(note.title)}</small>
-        </button>
-      `;
-    })
-    .join("");
+  const parts = [];
+  for (const unit of units) {
+    const hasSubs = Array.isArray(unit.subs) && unit.subs.length;
+    const placeholderClass = unit.placeholder ? " placeholder" : "";
+    parts.push(`<div class="unit-group${placeholderClass}">`);
+    parts.push(
+      `<div class="unit-head">
+        <strong>${escapeHtml(unit.title)}</strong>
+        ${unit.subtitle ? `<small>${escapeHtml(unit.subtitle)}</small>` : ""}
+      </div>`
+    );
+    if (hasSubs) {
+      parts.push(`<div class="sub-list">`);
+      for (const sub of unit.subs) {
+        const active = sub.id === state.currentSubId ? " active" : "";
+        parts.push(
+          `<button class="sub-link${active}" data-sub="${sub.id}">
+            <strong>${escapeHtml(sub.title)}</strong>
+            ${sub.summary ? `<small>${escapeHtml(sub.summary)}</small>` : ""}
+          </button>`
+        );
+      }
+      parts.push(`</div>`);
+    } else if (unit.placeholder) {
+      parts.push(
+        `<button class="sub-link placeholder-link" data-placeholder="${unit.id}">
+          <small>點擊查看說明</small>
+        </button>`
+      );
+    }
+    parts.push(`</div>`);
+  }
+  pageNav.innerHTML = parts.join("");
 }
 
-function renderPager(note) {
-  const idx = preparedNotes.findIndex((n) => n.slug === note.slug);
-  const prev = preparedNotes[idx - 1];
-  const next = preparedNotes[idx + 1];
+function renderPager() {
+  const idx = subs.findIndex((s) => s.id === state.currentSubId);
+  const prev = subs[idx - 1];
+  const next = subs[idx + 1];
 
-  const btn = (n, label, cls) => {
-    if (!n) {
+  const btn = (s, label, cls) => {
+    if (!s) {
       return `<button class="pager-btn ${cls}" disabled><small>${label}</small><strong>—</strong></button>`;
     }
     return `
-      <button class="pager-btn ${cls}" data-slug="${n.slug}">
+      <button class="pager-btn ${cls}" data-sub="${s.id}">
         <small>${label}</small>
-        <strong>${escapeHtml(n.title)}</strong>
+        <strong>${escapeHtml(s.title)}</strong>
       </button>
     `;
   };
@@ -218,34 +307,76 @@ function renderPager(note) {
   pagePager.innerHTML = btn(prev, "← Prev", "prev") + btn(next, "Next →", "next");
 }
 
-function renderNote() {
-  const note =
-    preparedNotes.find((item) => item.slug === state.currentSlug) ||
-    preparedNotes[0];
-  if (!note) return;
+function renderSub() {
+  const sub = subById.get(state.currentSubId);
+  if (!sub) return;
+  state.currentPlaceholderId = null;
 
-  state.currentSlug = note.slug;
-  const num = String(note.pageNumber).padStart(2, "0");
+  const unitDisplay = `${sub.unitTitle}${sub.unitSubtitle ? " · " + sub.unitSubtitle : ""}`;
+  document.title = `${sub.title} · ${unitDisplay}`;
+  siteTitle.innerHTML = `${escapeHtml(sub.title)} <small>· ${escapeHtml(sub.unitTitle)}</small>`;
+  pageTitle.textContent = sub.title;
+  pageEyebrow.textContent = `${unitDisplay}${sub.summary ? " · " + sub.summary : ""}`;
 
-  document.title = `Page ${num} · ${note.title} — Ch.4 Quantum Theory`;
-  siteTitle.innerHTML = `${escapeHtml(note.title)} <small>· Page ${num}</small>`;
-  pageTitle.textContent = note.title;
-  pageEyebrow.textContent = `Page ${num}${note.meta.source ? " · " + note.meta.source : ""}`;
+  const pageNotes = sub.pages
+    .map((slug) => notesBySlug.get(slug))
+    .filter(Boolean);
 
-  const tagRow = Array.isArray(note.meta.tags) && note.meta.tags.length
-    ? `<div class="tag-row">${note.meta.tags
-        .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
+  const tagSet = new Set();
+  for (const note of pageNotes) {
+    if (Array.isArray(note.meta.tags)) {
+      for (const t of note.meta.tags) tagSet.add(t);
+    }
+  }
+  const tagRow = tagSet.size
+    ? `<div class="tag-row">${[...tagSet]
+        .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
         .join("")}</div>`
     : "";
 
-  noteContent.innerHTML = tagRow + markdownToHtml(removeNonCleanSections(note.body));
+  const pageBlocks = pageNotes
+    .map((note) => {
+      const num = String(note.pageNumber).padStart(2, "0");
+      const marker = `
+        <div class="page-marker" id="page-${num}">
+          <span>Page ${num}</span>
+          <span class="marker-title">${escapeHtml(note.title)}</span>
+        </div>`;
+      return marker + markdownToHtml(removeNonCleanSections(note.body));
+    })
+    .join("");
+
+  noteContent.innerHTML = tagRow + pageBlocks;
   renderNav();
-  renderPager(note);
-  history.replaceState(null, "", `?page=${note.slug}`);
+  renderPager();
+  history.replaceState(null, "", `?sub=${sub.id}`);
 
   if (window.MathJax?.typesetPromise) {
     MathJax.typesetPromise([noteContent]);
   }
+}
+
+function renderPlaceholder(unitId) {
+  const unit = units.find((u) => u.id === unitId);
+  if (!unit) return;
+  state.currentPlaceholderId = unitId;
+  state.currentSubId = null;
+
+  document.title = `${unit.title} — 待補`;
+  siteTitle.innerHTML = `${escapeHtml(unit.title)} <small>· 待補</small>`;
+  pageTitle.textContent = unit.title;
+  pageEyebrow.textContent = "尚未建立";
+
+  noteContent.innerHTML = `
+    <div class="placeholder-card">
+      <h3>這個單元還沒有內容</h3>
+      <p>${escapeHtml(unit.title)}${unit.subtitle ? `（${escapeHtml(unit.subtitle)}）` : ""}預定之後會由作者填入筆記。</p>
+      <p class="muted">目前可以先看「單元二 · Ch.4 Quantum Theory」的內容。</p>
+    </div>
+  `;
+  renderNav();
+  pagePager.innerHTML = "";
+  history.replaceState(null, "", `?placeholder=${unit.id}`);
 }
 
 function openDrawer() {
@@ -268,11 +399,13 @@ function renderSearch() {
     return;
   }
 
-  const results = preparedNotes
-    .map((note) => {
+  const results = [];
+  for (const sub of subs) {
+    const pageNotes = sub.pages.map((slug) => notesBySlug.get(slug)).filter(Boolean);
+    for (const note of pageNotes) {
       const haystack = `${note.title}\n${note.content}`.toLowerCase();
       const index = haystack.indexOf(query);
-      if (index === -1) return null;
+      if (index === -1) continue;
       const plain = note.content.replace(/[#*`$>-]/g, " ");
       const plainLower = plain.toLowerCase();
       const plainIndex = plainLower.indexOf(query);
@@ -280,20 +413,21 @@ function renderSearch() {
         plainIndex >= 0
           ? plain.slice(Math.max(0, plainIndex - 60), plainIndex + 120)
           : note.title;
-      return { note, excerpt };
-    })
-    .filter(Boolean)
-    .slice(0, 8);
+      results.push({ sub, note, excerpt });
+      if (results.length >= 8) break;
+    }
+    if (results.length >= 8) break;
+  }
 
   searchResults.hidden = false;
   searchResults.innerHTML = `
     <p class="results-title">${results.length} Result${results.length === 1 ? "" : "s"}</p>
     ${results
       .map(
-        ({ note, excerpt }) => `
-      <button class="result-item" data-slug="${note.slug}">
-        <strong>Page ${String(note.pageNumber).padStart(2, "0")} — ${escapeHtml(note.title)}</strong>
-        <small>${escapeHtml(excerpt.trim())}</small>
+        ({ sub, note, excerpt }) => `
+      <button class="result-item" data-sub="${sub.id}" data-anchor="page-${String(note.pageNumber).padStart(2, "0")}">
+        <strong>${escapeHtml(sub.title)} · Page ${String(note.pageNumber).padStart(2, "0")}</strong>
+        <small>${escapeHtml(note.title)} — ${escapeHtml(excerpt.trim())}</small>
       </button>
     `
       )
@@ -301,35 +435,54 @@ function renderSearch() {
   `;
 }
 
-function goto(slug, { scrollTop = true } = {}) {
-  state.currentSlug = slug;
-  renderNote();
+function gotoSub(subId, { scrollTop = true, anchor = null } = {}) {
+  state.currentSubId = subId;
+  renderSub();
   if (!isDesktop()) closeDrawer();
+  if (anchor) {
+    const target = document.getElementById(anchor);
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+  }
   if (scrollTop) window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function gotoPlaceholder(unitId) {
+  renderPlaceholder(unitId);
+  if (!isDesktop()) closeDrawer();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 menuBtn.addEventListener("click", openDrawer);
 drawerBackdrop.addEventListener("click", closeDrawer);
 
 pageNav.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-slug]");
-  if (!button) return;
-  goto(button.dataset.slug);
+  const subBtn = event.target.closest("[data-sub]");
+  if (subBtn) {
+    gotoSub(subBtn.dataset.sub);
+    return;
+  }
+  const ph = event.target.closest("[data-placeholder]");
+  if (ph) {
+    gotoPlaceholder(ph.dataset.placeholder);
+  }
 });
 
 pagePager.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-slug]");
+  const button = event.target.closest("[data-sub]");
   if (!button) return;
-  goto(button.dataset.slug);
+  gotoSub(button.dataset.sub);
 });
 
 searchResults.addEventListener("click", (event) => {
-  const button = event.target.closest("[data-slug]");
+  const button = event.target.closest("[data-sub]");
   if (!button) return;
   state.query = "";
   searchInput.value = "";
   renderSearch();
-  goto(button.dataset.slug);
+  gotoSub(button.dataset.sub, { anchor: button.dataset.anchor });
 });
 
 searchInput.addEventListener("input", (event) => {
@@ -340,12 +493,18 @@ searchInput.addEventListener("input", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeDrawer();
   if (event.target === searchInput) return;
-  const idx = preparedNotes.findIndex((n) => n.slug === state.currentSlug);
-  if (event.key === "ArrowLeft" && preparedNotes[idx - 1]) {
-    goto(preparedNotes[idx - 1].slug);
-  } else if (event.key === "ArrowRight" && preparedNotes[idx + 1]) {
-    goto(preparedNotes[idx + 1].slug);
+  if (!state.currentSubId) return;
+  const idx = subs.findIndex((s) => s.id === state.currentSubId);
+  if (event.key === "ArrowLeft" && subs[idx - 1]) {
+    gotoSub(subs[idx - 1].id);
+  } else if (event.key === "ArrowRight" && subs[idx + 1]) {
+    gotoSub(subs[idx + 1].id);
   }
 });
 
-renderNote();
+const placeholderParam = params.get("placeholder");
+if (placeholderParam) {
+  renderPlaceholder(placeholderParam);
+} else {
+  renderSub();
+}

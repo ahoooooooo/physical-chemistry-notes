@@ -64,7 +64,13 @@ $$
 \vec{F} = -\nabla E_p
 $$
 
-在一維情況下可寫成：
+在一維情況下，原筆記以向量串聯式寫成：
+
+$$
+\vec{F} = -\nabla E_p = -\frac{dE_p}{dx}\,\hat{x}
+$$
+
+取 $x$ 分量的標量形式：
 
 $$
 F_x = -\frac{dE_p}{dx}
@@ -135,6 +141,10 @@ f=\frac{1}{2\pi}\sqrt{\frac{k}{m}},
 \qquad
 T=2\pi\sqrt{\frac{m}{k}}
 $$
+
+### 1.4 Diagram Notes
+
+原頁右側畫了一段彈簧連著質量塊，對應的位移 $x(t)$ 被畫成沿著時間軸（$t$）前進的 sinusoidal 曲線：彈簧提供 Hooke 恢復力 $F_s=-kx$，質量塊在平衡位置附近作 simple harmonic motion，位移隨時間呈正弦變化。
 
 ## 2. Wave Mechanics
 
