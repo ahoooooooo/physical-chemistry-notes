@@ -2,8 +2,15 @@ window.UNITS_DATA = [
   {
     id: "unit-3",
     title: "單元三",
-    subtitle: "（待補）",
-    placeholder: true
+    subtitle: "Ch.3 Chemical Dynamics",
+    subs: [
+      {
+        id: "u3-intro",
+        title: "Introduction & HS Collision Theory",
+        summary: "章節總覽、collision density、preexponential factor 來源",
+        pages: ["ch3-page-01"]
+      }
+    ]
   },
   {
     id: "unit-4",

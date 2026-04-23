@@ -354,9 +354,10 @@ function renderSub() {
   const pageBlocks = pageNotes
     .map((note) => {
       const num = String(note.pageNumber).padStart(2, "0");
+      const chapter = note.meta.chapter ? `Ch.${note.meta.chapter} · ` : "";
       const marker = `
         <div class="page-marker" id="page-${num}">
-          <span>Page ${num}</span>
+          <span>${chapter}Page ${num}</span>
           <span class="marker-title">${escapeHtml(note.title)}</span>
         </div>`;
       return marker + markdownToHtml(removeNonCleanSections(note.body));
