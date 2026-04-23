@@ -2,8 +2,13 @@
 <html lang="zh-Hant">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Physical Chemistry Notes — Ch.4 Quantum Theory</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#fafaf9" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0b0d" media="(prefers-color-scheme: dark)" />
+    <title>Physical Chemistry — Ch.4 Quantum Theory</title>
     <link rel="stylesheet" href="styles.css" />
     <script>
       window.MathJax = {
@@ -18,52 +23,51 @@
     <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
   </head>
   <body>
-    <div class="site-shell">
-      <aside class="sidebar" aria-label="Chapter navigation">
-        <div class="brand">
-          <span class="brand-kicker">Physical Chemistry</span>
-          <h1>Ch.4 Quantum Theory</h1>
-        </div>
+    <div id="drawerBackdrop" class="drawer-backdrop"></div>
 
-        <label class="search-box">
-          <span>Search notes</span>
-          <input id="searchInput" type="search" placeholder="blackbody, Bohr, ΔE..." />
-        </label>
+    <aside id="drawer" class="drawer" aria-label="Chapter navigation">
+      <div class="drawer-head">
+        <p class="eyebrow">Physical Chemistry</p>
+        <h1 class="brand">Ch.4 Quantum Theory</h1>
+      </div>
 
-        <nav id="pageNav" class="page-nav"></nav>
-      </aside>
+      <label class="search-box">
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="搜尋 blackbody, Bohr, ΔE..."
+        />
+      </label>
+
+      <section id="searchResults" class="search-results" hidden></section>
+
+      <nav id="pageNav" class="page-nav"></nav>
+    </aside>
+
+    <div class="site-main">
+      <header class="site-header">
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+          >
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+        <h2 class="site-title" id="siteTitle">Quantum Theory</h2>
+      </header>
 
       <main class="reader">
-        <header class="hero">
-          <div>
-            <p class="eyebrow">Text Chapter 11</p>
-            <h2 id="heroTitle">Quantum Theory</h2>
-            <p id="heroSummary">
-              From classical waves to quantum mechanics: blackbody radiation, photons, Bohr model, matter waves, and uncertainty.
-            </p>
-          </div>
-          <div class="hero-card">
-            <span id="pageCounter">17 pages</span>
-            <strong>Concept-first notes</strong>
-            <small>Formulas, common mistakes, and original-page anchors are preserved.</small>
-          </div>
-        </header>
-
-        <section id="searchResults" class="search-results" hidden></section>
-
+        <div class="reader-head">
+          <p class="eyebrow" id="pageEyebrow">Page 01</p>
+          <h1 class="page-title" id="pageTitle">Quantum Theory</h1>
+        </div>
         <article id="noteContent" class="note-content"></article>
+        <nav id="pagePager" class="page-pager" aria-label="Page navigation"></nav>
       </main>
-
-      <aside class="toc-panel" aria-label="Current page outline">
-        <div class="toc-card">
-          <p class="toc-title">On This Page</p>
-          <nav id="tocNav"></nav>
-        </div>
-        <div class="formula-card">
-          <p class="toc-title">Focus</p>
-          <div id="focusBox">Select a page to view its key sections.</div>
-        </div>
-      </aside>
     </div>
 
     <script src="notes-data.js"></script>
