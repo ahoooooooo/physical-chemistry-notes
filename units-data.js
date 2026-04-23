@@ -7,8 +7,8 @@ window.UNITS_DATA = [
       {
         id: "u3-intro",
         title: "Introduction & HS Collision Theory",
-        summary: "章節總覽、collision density、preexponential factor 來源",
-        pages: ["ch3-page-01"]
+        summary: "章節總覽、collision density、preexponential factor 來源、rate law 連結",
+        pages: ["ch3-page-01", "ch3-page-02"]
       }
     ]
   },
