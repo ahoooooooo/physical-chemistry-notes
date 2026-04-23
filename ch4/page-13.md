@@ -120,6 +120,8 @@ $$
 
 這些能量值和 $E_n=-13.6/n^2\ \text{eV}$ 換算後的結果一致，因為 $1\ \text{eV}=1.60\times10^{-19}\ \text{J}$。
 
+![Hydrogen energy levels and spectral series](images/hydrogen-transitions.png "Electron transitions in hydrogen; the named series (Lyman, Balmer, Paschen, Brackett, Pfund) correspond to transitions terminating at $n_1=1,2,3,4,5$ (Wikipedia Commons).")
+
 ## 3. Electronic Transition and Spectral Lines
 
 當 electron 在兩個 energy states 之間 transition 時：

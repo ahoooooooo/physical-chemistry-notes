@@ -204,7 +204,18 @@ function removeNonCleanSections(markdown) {
 
 function inlineMarkdown(text) {
   const mathTokens = [];
-  let safe = escapeHtml(text).replace(/\$([^$\n]+)\$/g, (_, math) => {
+  const imgTokens = [];
+
+  let pre = text.replace(/!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)/g, (_, alt, src, title) => {
+    const token = `@@IMG${imgTokens.length}@@`;
+    const captionHtml = title ? `<figcaption>${escapeHtml(title)}</figcaption>` : "";
+    imgTokens.push(
+      `<figure class="note-figure"><img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" />${captionHtml}</figure>`
+    );
+    return token;
+  });
+
+  let safe = escapeHtml(pre).replace(/\$([^$\n]+)\$/g, (_, math) => {
     const token = `@@INLINE${mathTokens.length}@@`;
     mathTokens.push(`$${math}$`);
     return token;
@@ -212,9 +223,11 @@ function inlineMarkdown(text) {
 
   safe = safe
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, "$1<em>$2</em>")
     .replace(/`([^`]+)`/g, "<code>$1</code>");
 
-  return safe.replace(/@@INLINE(\d+)@@/g, (_, index) => mathTokens[Number(index)]);
+  safe = safe.replace(/@@INLINE(\d+)@@/g, (_, index) => mathTokens[Number(index)]);
+  return safe.replace(/@@IMG(\d+)@@/g, (_, index) => imgTokens[Number(index)]);
 }
 
 function prepareNote(raw) {

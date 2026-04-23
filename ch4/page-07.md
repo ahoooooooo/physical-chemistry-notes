@@ -327,6 +327,8 @@ Planck 的量子化公式則能正確給出：
 
 圖的核心意義是 classical prediction 在 high-frequency region 失敗，而 quantum prediction 能符合實驗。
 
+![Planck vs Rayleigh-Jeans vs Wien](images/planck-vs-rj.png "Comparison of Rayleigh–Jeans law (diverges at high frequency — ultraviolet catastrophe), Wien approximation, and Planck's law at 5800 K (Wikipedia Commons).")
+
 ## Key Formulas
 
 ### Total Energy

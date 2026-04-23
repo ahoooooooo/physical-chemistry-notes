@@ -295,6 +295,8 @@ $$
 
 這四條線就是 hydrogen 在玻璃放電管中常見的「紅、藍綠、藍紫、紫」色特徵光。
 
+![Visible hydrogen emission spectrum](images/hydrogen-emission-spectrum.png "Balmer series: the four visible hydrogen emission lines (656 nm red, 486 nm cyan, 434 nm blue, 410 nm violet) from n=3,4,5,6 → n=2 transitions (Wikipedia Commons).")
+
 ## Key Formulas
 
 ### Potential Energy

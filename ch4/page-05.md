@@ -54,6 +54,8 @@ $$
 
 後面會連到 Wien displacement law、Stefan-Boltzmann law 和 Planck law。
 
+![Blackbody radiation spectrum at multiple temperatures](images/blackbody-spectrum.svg "Spectral radiance vs wavelength for a blackbody — higher temperature raises total intensity and shifts the peak toward shorter wavelengths / higher frequencies (Wikipedia Commons).")
+
 ## 2. Radiant Energy Density
 
 Radiant energy density 可寫成：

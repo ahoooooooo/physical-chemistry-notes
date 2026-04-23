@@ -135,6 +135,8 @@ $$
 - 不同 mode 對應不同 wavelength。
 - $n$ 越大，波長越短。
 
+![Standing wave modes on a string fixed at both ends](images/standing-wave-string.gif "First five harmonics on a string with both ends fixed; allowed wavelengths satisfy $\\lambda_n = 2l/n$ (Wikipedia Commons).")
+
 ## 3. Properties of EM Radiation Interacting with Matter
 
 當 electromagnetic wave 打到物體上時，可能發生多種現象，例如：

@@ -198,6 +198,8 @@ $$
 
 圖的重點是：intensity 控制 photoelectron number，frequency 控制 electron maximum kinetic energy。
 
+![Photoelectric effect in a metal](images/photoelectric-effect.svg "Incident photons (hν) eject electrons from the metal surface only when hν exceeds the work function φ (Wikipedia Commons).")
+
 ## Key Formulas
 
 ### Photon Energy

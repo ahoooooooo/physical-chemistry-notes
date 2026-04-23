@@ -146,6 +146,8 @@ $$
 
 原頁右側畫了一段彈簧連著質量塊，對應的位移 $x(t)$ 被畫成沿著時間軸（$t$）前進的 sinusoidal 曲線：彈簧提供 Hooke 恢復力 $F_s=-kx$，質量塊在平衡位置附近作 simple harmonic motion，位移隨時間呈正弦變化。
 
+![Animated mass–spring system showing SHM](images/shm-spring.gif "Spring–mass SHM: mass oscillates sinusoidally about the equilibrium position (source: Wikipedia Commons).")
+
 ## 2. Wave Mechanics
 
 ### 2.1 Basic Parameters of Waves
