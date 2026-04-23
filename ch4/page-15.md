@@ -54,7 +54,7 @@ $$
 
 原頁右側的圓形軌道與波紋圖就是在表達這個概念。
 
-![de Broglie standing wave around a Bohr orbit](images/de-broglie-electron-orbit.png "Electron as standing wave wrapping a circular orbit — only when $2\\pi r = n\\lambda$ does the wave close on itself, giving Bohr's quantization (Wikipedia Commons).")
+![de Broglie standing wave around a Bohr orbit](images/de-broglie-electron-orbit.png "Electron as standing wave wrapping a circular orbit — only when $2\pi r = n\lambda$ does the wave close on itself, giving Bohr's quantization (Wikipedia Commons).")
 
 ## 3. Recovering Bohr's Angular Momentum Quantization
 

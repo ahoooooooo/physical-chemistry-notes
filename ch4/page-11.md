@@ -36,7 +36,7 @@ tags:
 
 Bohr 為了解釋 hydrogen atom 的 line spectrum，提出 Bohr atomic theory。
 
-![Bohr model of the atom](images/bohr-atom.svg "Bohr model: electron in discrete circular orbit around the nucleus, transitions between orbits emit or absorb photons with $E=h\\nu$ (Wikipedia Commons).")
+![Bohr model of the atom](images/bohr-atom.svg "Bohr model: electron in discrete circular orbit around the nucleus, transitions between orbits emit or absorb photons with $E=h\nu$ (Wikipedia Commons).")
 
 ### 2.1 Stationary States
 

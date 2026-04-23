@@ -32,7 +32,7 @@ tags:
 - $d$：粒子之間的距離（相鄰散射中心的間距）。
 - $\sigma$：粒子本身的直徑。
 
-![Particle spacing d vs particle diameter sigma](images/diffraction-size-scale.png "A row of particles on a baseline — $d$ marks the inter-particle distance; $\\sigma$ marks a single particle's diameter.")
+![Particle spacing d vs particle diameter sigma](images/diffraction-size-scale.png "A row of particles on a baseline — $d$ marks the inter-particle distance; $\sigma$ marks a single particle's diameter.")
 
 ### 1.1 Core Idea
 

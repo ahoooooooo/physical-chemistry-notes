@@ -239,7 +239,7 @@ $$
 
 原頁下方的 $x,y,z$ 三軸、角度 $\phi$ 與 $L_z$ 示意圖就是在表達這個共軛關係。
 
-![Angular momentum axes and azimuthal angle](images/angular-momentum-axes.png "$L_z$ points along the $z$-axis; $\\phi$ is the azimuthal angle in the $x$–$y$ plane. These form a conjugate pair with $\\Delta\\phi\\,\\Delta L_z \\ge \\hbar/2$.")
+![Angular momentum axes and azimuthal angle](images/angular-momentum-axes.png "$L_z$ points along the $z$-axis; $\phi$ is the azimuthal angle in the $x$–$y$ plane. These form a conjugate pair with $\Delta\phi\,\Delta L_z \ge \hbar/2$.")
 
 ## 7. The Order of Measurement Matters
 

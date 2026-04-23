@@ -165,7 +165,7 @@ $$
 
 Compton effect（康普頓效應）是 X-ray scattering 的實驗現象。Compton 在 1923 年提出解釋，並於 1927 年獲得 Nobel Prize。
 
-![Compton scattering geometry](images/compton-scattering.png "Incident photon of wavelength $\\lambda$ scatters off a nearly free electron; scattered photon has longer wavelength $\\lambda'$ at angle θ, electron recoils (Wikipedia Commons).")
+![Compton scattering geometry](images/compton-scattering.png "Incident photon of wavelength $\lambda$ scatters off a nearly free electron; scattered photon has longer wavelength $\lambda'$ at angle θ, electron recoils (Wikipedia Commons).")
 
 ### 3.1 Experimental Observation
 
