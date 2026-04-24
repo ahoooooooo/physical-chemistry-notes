@@ -353,13 +353,25 @@ function renderSub() {
 
   const pageBlocks = pageNotes
     .map((note) => {
-      const num = String(note.pageNumber).padStart(2, "0");
-      const chapter = note.meta.chapter ? `Ch.${note.meta.chapter} · ` : "";
-      const marker = `
-        <div class="page-marker" id="page-${num}">
-          <span>${chapter}Page ${num}</span>
-          <span class="marker-title">${escapeHtml(note.title)}</span>
-        </div>`;
+      const chapterRaw = note.meta.chapter;
+      const chapterIsNumeric = typeof chapterRaw === "string" && /^\d+$/.test(chapterRaw);
+      const pageIsNumeric = !isNaN(Number(note.pageNumber));
+      let marker;
+      if (chapterIsNumeric && pageIsNumeric) {
+        const num = String(note.pageNumber).padStart(2, "0");
+        marker = `
+          <div class="page-marker" id="page-${num}">
+            <span>Ch.${chapterRaw} · Page ${num}</span>
+            <span class="marker-title">${escapeHtml(note.title)}</span>
+          </div>`;
+      } else {
+        // practice / quiz / HW notes — no page numbering
+        const anchorId = String(note.slug).replace(/[^a-zA-Z0-9-]/g, "-");
+        marker = `
+          <div class="page-marker" id="${anchorId}">
+            <span class="marker-title">${escapeHtml(note.title)}</span>
+          </div>`;
+      }
       return marker + markdownToHtml(removeNonCleanSections(note.body));
     })
     .join("");

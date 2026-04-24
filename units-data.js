@@ -69,9 +69,34 @@ window.UNITS_DATA = [
   },
   {
     id: "homework",
-    title: "作業",
-    subtitle: "（待補）",
-    placeholder: true
+    title: "作業與小考",
+    subtitle: "HW + Quiz 解答",
+    subs: [
+      {
+        id: "q2-sol",
+        title: "Quiz 2 解答",
+        summary: "TST / Arrhenius 對齊題：算 ΔH‡ 和 ΔS‡",
+        pages: ["practice-q2"]
+      },
+      {
+        id: "hw3",
+        title: "HW3",
+        summary: "（解答待補）",
+        pages: ["practice-hw3"]
+      },
+      {
+        id: "hw4",
+        title: "HW4",
+        summary: "（解答待補）",
+        pages: ["practice-hw4"]
+      },
+      {
+        id: "hw5",
+        title: "HW5",
+        summary: "（解答待補）",
+        pages: ["practice-hw5"]
+      }
+    ]
   },
   {
     id: "past-exams",
