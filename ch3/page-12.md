@@ -84,6 +84,8 @@ beam 幾何（原頁中段）：
 
 這和 Page 11 的 stripping 圖剛好相反——stripping 的 $AB$ 是沿 $A$ 前進方向繼續走（forward），rebound 的 $AB$ 是往回彈（backward）。
 
+![Rebound scattering geometry](images/rebound-scattering.png "Rebound mechanism 的散射幾何：$A$ 從左水平入射、$BC$ 從右下斜入射；反應後 $AB$ 朝左上反彈（**backward scattering**，和 stripping 相反），$C$ 被推向右方。")
+
 ### 3.4 PES 上的 reaction path
 
 原頁左下畫 $r_{AB}$ vs $r_{BC}$ 的等高線圖，反應路徑從 reactant valley 出發後，需要較深入地壓縮 $r_{AB}$（靠得很近）才越過 saddle point，再進入 product valley。這是 **late-barrier / late-downhill surface** 的典型圖像，Page 13 會正式展開。
@@ -99,6 +101,8 @@ beam 幾何（原頁中段）：
 | 3 | 正面相碰：$A{-}B$ 開始形成，$C$ 被推走 |
 | 4 | **$\leftarrow A{-}B$**、$C\to$（AB 往回彈） |
 | 5 | $\leftarrow A{-}B$、$C\to$ 各自加速飛離 |
+
+![Rebound mechanism 5-step cartoon](images/rebound-5step.png "Rebound 5 步分解：head-on approach → 第 3 步的 $A{-}\\times{-}B{-}C$ 標記 TS → $AB$ 反彈回去（往左），$C$ 被推向右；產物帶有強 translational energy。")
 
 ### 3.6 產物能量分配
 

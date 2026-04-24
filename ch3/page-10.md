@@ -82,6 +82,8 @@ PES 直接決定：
 
 原頁左下畫出兩支狹縫管（beams）以某個角度 $\theta$ 交叉，末端有一個 detector 偵測散射產物。
 
+![Crossed molecular beam apparatus](images/molecular-beam-apparatus.png "A beam 與 B beam 以角度 $\theta$ 交叉；碰撞點產生散射產物往各方向飛，detector 接收特定角度範圍內的粒子以分析 state-to-state dynamics。")
+
 ### 3.2 可以得到的資訊
 
 | 項目 | 內容 |

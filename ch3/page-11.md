@@ -46,6 +46,8 @@ $$
 - 出射：$AB$ 繼續往右上沿原本 $A$ 的延長線方向；$C$ 沿稍偏的方向飛走
 - 虛線標：**path of center of mass**（質心運動軌跡）
 
+![Stripping scattering geometry](images/stripping-scattering.png "Stripping mechanism 的散射幾何：$A$ 從左水平入射、$BC$ 從左下斜入射；反應後 $AB$ 沿 $A$ 原方向前進（forward scattering），$C$ 被擦向上方，橘色虛線是 c.o.m path。")
+
 ### 2.4 名稱由來
 
 > **$A$ strips away $B$ from $C$；$C$ 像 spectator（旁觀者）。**
@@ -84,6 +86,8 @@ Stripping 的典型特徵：
 | 3 | 電子轉移完成，$A{-}B$ 開始形成、$C$ 被釋放 |
 | 4 | $A{-}B$ 出現反衝趨勢、$C$ 獨立 |
 | 5 | $A{-}B\to$、$C\leftarrow$，往各自方向飛走 |
+
+![Harpooning mechanism 5-step cartoon](images/harpooning-5step.png "Harpooning 5 步分解：$A$ 先丟出電子（第 2 步橘色虛線 $e^-$）讓 $BC$ 變 $(BC)^-$，庫侖吸引拉成 $AB$，產物帶有強振動能量（strong vibrational energy）。")
 
 ### 3.3 PES 上的 reaction path（原頁左下）
 
