@@ -633,20 +633,15 @@ button, input { font: inherit; color: inherit; }
   .reader-head { margin-bottom: 0.8rem; }
   .page-title { font-size: 1.6rem; }
 
-  /* 標題不孤立 */
-  h1, h2, h3, h4,
-  .note-content h2,
+  /* 只讓小節標題不孤立（h3/h4），避免整組標題一起被推到下頁留大片空白 */
   .note-content h3,
   .note-content h4 {
     break-after: avoid-page;
     page-break-after: avoid;
   }
 
-  /* 重點內容不拆頁 */
+  /* 重點內容不拆頁：表格與數學式維持（這是硬要求），figure 改為允許自然流動 */
   .note-content table,
-  .note-content blockquote,
-  .note-content figure,
-  .note-figure,
   .math-block,
   pre,
   mjx-container[display],
@@ -655,8 +650,17 @@ button, input { font: inherit; color: inherit; }
     page-break-inside: avoid;
   }
 
-  /* 媒體與表格寬度控制 */
-  img,
+  /* figure 內部不強制同頁，但限制圖片高度讓兩張圖有機會塞進同一頁 */
+  .note-content img {
+    max-width: 100% !important;
+    max-height: 62vh !important;
+    height: auto !important;
+    width: auto !important;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
   svg,
   canvas,
   .note-content table {
