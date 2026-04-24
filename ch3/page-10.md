@@ -51,7 +51,7 @@ tags:
 
 ![2D contour PES for H+H2 reaction](images/pes-h-h2-contour.jpg "2D 等高線 PES（$H_a + H_b H_c \\leftrightarrow H_a H_b + H_c$）—— 概念等同 $A+BC \\to AB+C$：左上是 reactant valley、右下是 product valley、兩者之間的鞍點就是 transition state（Wikipedia Commons）")
 
-![3D potential energy surface (water molecule example)](images/pes-water-3d.png "3D PES 的視覺示意（以水分子幾何為例，$q_1$=鍵長、$q_2$=鍵角）—— PES 本質是多維曲面；反應性 PES 的具體幾何請對照上面的 2D 等高線圖（Wikipedia Commons）")
+![3D PES for A + BC → AB + C reaction](images/pes-3d-reaction.png "3D PES 示意（$A+BC\\to AB+C$）：兩個 valley — A+BC (reactant) 與 AB+C (product)，於中央 saddle point 交會（= activated complex = $X^\\ddagger$）；遠處 A+B+C 為三原子全分離的高平台；虛線為 reaction path（幾何示意，精確 L 形幾何以上方 2D 等高線圖為準）")
 
 ### 2.3 原頁的三張輔助剖面
 
