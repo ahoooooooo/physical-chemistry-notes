@@ -80,20 +80,20 @@ window.UNITS_DATA = [
       },
       {
         id: "hw3",
-        title: "HW3",
-        summary: "（解答待補）",
+        title: "HW3 · Ch.3 Dynamics",
+        summary: "9.39 TST, 9.41 Arrhenius, 9.43 collision",
         pages: ["practice-hw3"]
       },
       {
         id: "hw4",
-        title: "HW4",
-        summary: "（解答待補）",
+        title: "HW4 · Ch.4 Basics",
+        summary: "11.1 photon, 11.5 SHM, 11.13 photoelectric",
         pages: ["practice-hw4"]
       },
       {
         id: "hw5",
-        title: "HW5",
-        summary: "（解答待補）",
+        title: "HW5 · Quantum",
+        summary: "11.10 Heisenberg, 11.16 normalization, 11.21 eigenfunction, 11.39 Bohr, 11.42 Rydberg",
         pages: ["practice-hw5"]
       }
     ]
