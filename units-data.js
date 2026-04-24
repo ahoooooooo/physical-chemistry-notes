@@ -19,8 +19,8 @@ window.UNITS_DATA = [
       {
         id: "u3-tst",
         title: "Transition State Theory",
-        summary: "能障圖、兩個假設、k = ν K‡ 骨架",
-        pages: ["ch3-page-06"]
+        summary: "能障圖、兩個假設、Eyring form、ΔG‡/ΔH‡/ΔS‡、連到 Arrhenius",
+        pages: ["ch3-page-06", "ch3-page-07"]
       }
     ]
   },
