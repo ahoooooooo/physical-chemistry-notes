@@ -16,6 +16,8 @@ const searchResults = document.querySelector("#searchResults");
 const drawer = document.querySelector("#drawer");
 const drawerBackdrop = document.querySelector("#drawerBackdrop");
 const menuBtn = document.querySelector("#menuBtn");
+const themeBtn = document.querySelector("#themeBtn");
+const themeColorMeta = document.querySelector("#themeColorMeta");
 const pagePager = document.querySelector("#pagePager");
 const siteTitle = document.querySelector("#siteTitle");
 const pageTitle = document.querySelector("#pageTitle");
@@ -494,6 +496,37 @@ function gotoPlaceholder(unitId) {
   if (!isDesktop()) closeDrawer();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
+
+function currentTheme() {
+  const forced = document.documentElement.dataset.theme;
+  if (forced === "light" || forced === "dark") return forced;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function applyTheme(theme) {
+  if (theme === "light" || theme === "dark") {
+    document.documentElement.dataset.theme = theme;
+    try { localStorage.setItem("theme", theme); } catch (e) {}
+  } else {
+    delete document.documentElement.dataset.theme;
+    try { localStorage.removeItem("theme"); } catch (e) {}
+  }
+  if (themeColorMeta) {
+    themeColorMeta.setAttribute("content", currentTheme() === "dark" ? "#0b0b0d" : "#fafaf9");
+  }
+}
+
+themeBtn?.addEventListener("click", () => {
+  applyTheme(currentTheme() === "dark" ? "light" : "dark");
+});
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+  if (!document.documentElement.dataset.theme && themeColorMeta) {
+    themeColorMeta.setAttribute("content", currentTheme() === "dark" ? "#0b0b0d" : "#fafaf9");
+  }
+});
+
+applyTheme(document.documentElement.dataset.theme || null);
 
 menuBtn.addEventListener("click", openDrawer);
 drawerBackdrop.addEventListener("click", closeDrawer);
