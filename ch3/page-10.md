@@ -63,6 +63,8 @@ tags:
 
 第三張就是大家最熟悉的「能量—反應座標圖」，但要記得它只是 PES 上沿 reaction path 的一條剖面，不是全部資訊。
 
+![Three 1D cross-sections of the PES](images/pes-three-cross-sections.png "(a) P.E. vs $r_{AB}$ 固定 $r_{BC}$：AB 鍵沿一條谷的 Morse 式剖面。(b) P.E. vs $r_{BC}$ 固定 $r_{AB}$：BC 鍵沿另一條谷的剖面。(c) P.E. vs reaction coordinate：拉直反應路徑，中間峰頂為 transition state $X^\\ddagger$，兩側分別是 $A+BC$ reactants 與 $AB+C$ products，$E_a$ 為 activation energy")
+
 ### 2.4 為什麼要 PES
 
 PES 直接決定：
