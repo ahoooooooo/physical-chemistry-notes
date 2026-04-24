@@ -25,8 +25,8 @@ window.UNITS_DATA = [
       {
         id: "u3-pes-dynamics",
         title: "PES & Reaction Dynamics",
-        summary: "PES 幾何、molecular beams、stripping、harpooning、rebound",
-        pages: ["ch3-page-10", "ch3-page-11", "ch3-page-12"]
+        summary: "PES 幾何、molecular beams、stripping、harpooning、rebound、surface 對照",
+        pages: ["ch3-page-10", "ch3-page-11", "ch3-page-12", "ch3-page-13"]
       }
     ]
   },
