@@ -217,13 +217,33 @@ $$
 
 ## 6. Wavenumber and Rydberg Equation
 
-因為：
+### 6.1 顯式代入能階差
+
+從 $E_n = -\dfrac{Z^2 e^2}{8\pi\varepsilon_0 a_0 n^2}$，$n_2 \to n_1$ 的能階差為：
 
 $$
-E_n\propto -\frac{Z^2}{n^2}
+E_{n_2} - E_{n_1}
+=
+\frac{Z^2 e^2}{8\pi\varepsilon_0 a_0}
+\left(
+\frac{1}{n_1^2} - \frac{1}{n_2^2}
+\right)
+= h\nu = \frac{hc}{\lambda}
 $$
 
-所以 spectral line 的 wavenumber 可寫成：
+### 6.2 取倒數得 wavenumber
+
+$$
+\frac{1}{\lambda} = \tilde{\nu} = \frac{Z^2 e^2}{8\pi\varepsilon_0 a_0 hc}\left(\frac{1}{n_1^2} - \frac{1}{n_2^2}\right)
+$$
+
+### 6.3 辨識出 Rydberg Constant
+
+$$
+\boxed{\,R_H = \dfrac{e^2}{8\pi\varepsilon_0 a_0 hc}\,}
+$$
+
+因此：
 
 $$
 \boxed{
@@ -264,7 +284,7 @@ R_H
 }
 $$
 
-這就是 Bohr model 對 line spectrum 的成功解釋。
+這就是 Bohr model 對 line spectrum 的成功解釋。原頁也標註此式稱 **Balmer-Rydberg-Ritz equation**。
 
 ## 7. Meaning of Line Spectrum
 
@@ -368,5 +388,11 @@ R_H Z^2
 \frac{1}{n_2^2}
 \right)
 }
+$$
+
+### Rydberg Constant 推導式
+
+$$
+\boxed{\,R_H = \dfrac{e^2}{8\pi\varepsilon_0 a_0 hc}\,}
 $$
 
