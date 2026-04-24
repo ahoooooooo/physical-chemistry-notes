@@ -49,9 +49,9 @@ tags:
 
 所以它不是一般的「山頂」，而是「馬鞍形」。
 
-![2D contour PES for H+H2 reaction](images/pes-h-h2-contour.jpg "2D 等高線 PES（$H_a + H_b H_c \\leftrightarrow H_a H_b + H_c$）—— 概念等同 $A+BC \\to AB+C$：左上是 reactant valley、右下是 product valley、兩者之間的鞍點就是 transition state（Wikipedia Commons）")
+![2D contour PES for H+H2 reaction](images/pes-h-h2-contour.jpg "2D 等高線 PES（$H_a + H_b H_c \leftrightarrow H_a H_b + H_c$）—— 概念等同 $A+BC \to AB+C$：左上是 reactant valley、右下是 product valley、兩者之間的鞍點就是 transition state（Wikipedia Commons）")
 
-![3D PES for A + BC → AB + C reaction](images/pes-3d-reaction.png "3D PES 示意（$A+BC\\to AB+C$）：兩個 valley — A+BC (reactant) 與 AB+C (product)，於中央 saddle point 交會（= activated complex = $X^\\ddagger$）；遠處 A+B+C 為三原子全分離的高平台；虛線為 reaction path（幾何示意，精確 L 形幾何以上方 2D 等高線圖為準）")
+![3D PES for A + BC → AB + C reaction](images/pes-3d-reaction.png "3D PES 示意（$A+BC\to AB+C$）：兩個 valley — A+BC (reactant) 與 AB+C (product)，於中央 saddle point 交會（= activated complex = $X^\ddagger$）；遠處 A+B+C 為三原子全分離的高平台；虛線為 reaction path（幾何示意，精確 L 形幾何以上方 2D 等高線圖為準）")
 
 ### 2.3 原頁的三張輔助剖面
 
@@ -63,7 +63,7 @@ tags:
 
 第三張就是大家最熟悉的「能量—反應座標圖」，但要記得它只是 PES 上沿 reaction path 的一條剖面，不是全部資訊。
 
-![Three 1D cross-sections of the PES](images/pes-three-cross-sections.png "(a) P.E. vs $r_{AB}$ 固定 $r_{BC}$：AB 鍵沿一條谷的 Morse 式剖面。(b) P.E. vs $r_{BC}$ 固定 $r_{AB}$：BC 鍵沿另一條谷的剖面。(c) P.E. vs reaction coordinate：拉直反應路徑，中間峰頂為 transition state $X^\\ddagger$，兩側分別是 $A+BC$ reactants 與 $AB+C$ products，$E_a$ 為 activation energy")
+![Three 1D cross-sections of the PES](images/pes-three-cross-sections.png "(a) P.E. vs $r_{AB}$ 固定 $r_{BC}$：AB 鍵沿一條谷的 Morse 式剖面。(b) P.E. vs $r_{BC}$ 固定 $r_{AB}$：BC 鍵沿另一條谷的剖面。(c) P.E. vs reaction coordinate：拉直反應路徑，中間峰頂為 transition state $X^\ddagger$，兩側分別是 $A+BC$ reactants 與 $AB+C$ products，$E_a$ 為 activation energy")
 
 ### 2.4 為什麼要 PES
 
