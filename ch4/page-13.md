@@ -183,7 +183,7 @@ Bohr model 能預測主要 spectral lines，但不能解釋更細的光譜分裂
 
 ## 5. Foundations of Quantum Mechanics
 
-Bohr model 還不是完整的 quantum mechanics。真正進一步的關鍵是 de Broglie 提出：
+Bohr model 還不是完整的 quantum mechanics。真正進一步的關鍵是 **de Broglie 在 1924 年提出**（並因此**獲得 Nobel Prize**）：
 
 > 不只 light 有 wave-particle duality，particles such as electrons can also have wave properties.
 

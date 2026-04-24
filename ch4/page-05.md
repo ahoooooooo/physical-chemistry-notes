@@ -118,11 +118,11 @@ $$
 
 ## 4. Planck's Quantization Hypothesis
 
-Planck 為了解釋 blackbody radiation，提出關鍵假設。
+Planck 在 **1900 年**為解釋 blackbody radiation 提出量子化假設（**1918 年獲 Nobel Prize**）。
 
 ### 4.1 Energy Is Transferred in Packets
 
-Radiant energy 不是連續任意交換，而是以小包形式傳遞。
+Radiant energy 不是連續任意交換，而是以小包形式傳遞（原頁註：following Boltzmann）。
 
 這些小包稱為：
 

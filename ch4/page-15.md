@@ -121,7 +121,7 @@ Heisenberg uncertainty principle（海森堡不確定性原理）的核心想法
 
 ## 5. Thought Experiment: Observing an Electron with a Photon
 
-原筆記是在描述一個 thought experiment：
+原筆記標註這是 Heisenberg **1926 年**提出的 thought experiment：
 
 > 假設 experimenter 想同時測量 electron 的 position 和 momentum，方法是用 photon 去照射 electron，並觀察散射後的 photon。
 
