@@ -21,7 +21,12 @@ tags:
 
 # HW5 — Heisenberg、Wavefunctions、Bohr
 
-## 11.10 — 膠體粒子位置不確定性
+> ⚠️ **考試範圍提醒（老師 4/27 第二次期中考公告）**
+>
+> - ✅ **11.10、11.39、11.42** — **在考試範圍**（老師上課例題：11.10 和 11.39）
+> - ❌ **11.16、11.21** — **不在考試範圍**（wavefunction normalization 和 eigenfunction 屬後面章節）
+
+## 11.10 — 膠體粒子位置不確定性 ⭐ 老師例題
 
 ### 題目
 
@@ -44,7 +49,7 @@ $$\boxed{\,\Delta u = 9\times 10^{-11}\ \mathrm{m/s}\,}$$
 
 ---
 
-## 11.16 — Wavefunction Normalization
+## 11.16 — Wavefunction Normalization ❌ 不在考試範圍
 
 ### 題目
 
@@ -89,7 +94,7 @@ $$\boxed{\,\frac{1}{\sqrt{3}}\psi_1 - \frac{1}{\sqrt{6}}\psi_2 + \frac{1}{\sqrt{
 
 ---
 
-## 11.21 — d/dx 的本徵函數
+## 11.21 — d/dx 的本徵函數 ❌ 不在考試範圍
 
 ### 題目
 
@@ -121,7 +126,7 @@ Give the eigenvalue where appropriate.（$k$ 為常數，$i = \sqrt{-1}$）
 
 ---
 
-## 11.39 — Bohr Theory 速度、de Broglie 波長
+## 11.39 — Bohr Theory 速度、de Broglie 波長 ⭐ 老師例題
 
 ### 題目
 
@@ -189,15 +194,16 @@ $$\boxed{\,E = 4.90\times 10^{-20}\ \mathrm{J}\,}$$
 
 ## 重點整理
 
-| 題 | 考點 | 關鍵公式 |
-|---|---|---|
-| 11.10 | 不確定性原理（宏觀不顯著） | $\Delta q\Delta u \ge h/(4\pi m)$ |
-| 11.16 | Wavefunction normalization | 係數平方和 → 歸一因子 |
-| 11.21 | Eigenfunction 判別 | $\hat{O}f = cf$ |
-| 11.39 | Bohr + de Broglie 連結 | $\lambda = 2\pi n a_0$, $C:\lambda = n$ |
-| 11.42 | Rydberg / Brackett series | $1/\lambda = R_H(1/n_1^2 - 1/n_2^2)$ |
+| 題 | 考點 | 關鍵公式 | 考試範圍 |
+|---|---|---|---|
+| 11.10 ⭐ | 不確定性原理（宏觀不顯著） | $\Delta q\Delta u \ge h/(4\pi m)$ | ✅ 老師例題 |
+| 11.16 | Wavefunction normalization | 係數平方和 → 歸一因子 | ❌ 不考 |
+| 11.21 | Eigenfunction 判別 | $\hat{O}f = cf$ | ❌ 不考 |
+| 11.39 ⭐ | Bohr + de Broglie 連結 | $\lambda = 2\pi n a_0$, $C:\lambda = n$ | ✅ 老師例題 |
+| 11.42 | Rydberg / Brackett series | $1/\lambda = R_H(1/n_1^2 - 1/n_2^2)$ | ✅ |
 
-**高度可考方向**：
-- 判別函數是否 eigenfunction（11.21 套路）
-- Rydberg 代入不同 $n_1, n_2$ 算 λ（11.42 套路）
-- Bohr velocity / radius / λ 連結（11.39 套路）
+**考試準備優先順序**：
+1. ⭐ **11.39**（Bohr velocity + de Broglie + $C:\lambda=n$）— 老師上課例題，極高可能考
+2. ⭐ **11.10**（Heisenberg $\Delta u$）— 老師上課例題
+3. **11.42**（Rydberg 代入不同 $n_1, n_2$）— 經典題型
+4. ❌ 11.16、11.21 可略過
