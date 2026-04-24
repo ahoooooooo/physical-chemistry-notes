@@ -7,8 +7,14 @@ window.UNITS_DATA = [
       {
         id: "u3-intro",
         title: "Introduction & HS Collision Theory",
-        summary: "章節總覽、collision density、preexponential factor 來源、rate law 連結",
+        summary: "章節總覽、collision density、preexponential factor、rate law",
         pages: ["ch3-page-01", "ch3-page-02"]
+      },
+      {
+        id: "u3-activation",
+        title: "Activation Energy from HS Theory",
+        summary: "head-on model、reactive cross section、Maxwell-Boltzmann 平均",
+        pages: ["ch3-page-03", "ch3-page-04"]
       }
     ]
   },
