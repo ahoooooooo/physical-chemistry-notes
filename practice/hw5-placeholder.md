@@ -23,10 +23,10 @@ tags:
 
 > ⚠️ **考試範圍提醒（老師 4/27 第二次期中考公告）**
 >
-> - ✅ **11.10、11.39、11.42** — **在考試範圍**（老師上課例題：11.10 和 11.39）
+> - ✅ **11.10、11.39、11.42** — **在考試範圍**（11.10、11.39 對應當天上課內容）
 > - ❌ **11.16、11.21** — **不在考試範圍**（wavefunction normalization 和 eigenfunction 屬後面章節）
 
-## 11.10 — 膠體粒子位置不確定性 ⭐ 老師例題
+## 11.10 — 膠體粒子位置不確定性（對應上課內容）
 
 ### 題目
 
@@ -126,7 +126,7 @@ Give the eigenvalue where appropriate.（$k$ 為常數，$i = \sqrt{-1}$）
 
 ---
 
-## 11.39 — Bohr Theory 速度、de Broglie 波長 ⭐ 老師例題
+## 11.39 — Bohr Theory 速度、de Broglie 波長（對應上課內容）
 
 ### 題目
 
@@ -196,14 +196,14 @@ $$\boxed{\,E = 4.90\times 10^{-20}\ \mathrm{J}\,}$$
 
 | 題 | 考點 | 關鍵公式 | 考試範圍 |
 |---|---|---|---|
-| 11.10 ⭐ | 不確定性原理（宏觀不顯著） | $\Delta q\Delta u \ge h/(4\pi m)$ | ✅ 老師例題 |
+| 11.10 | 不確定性原理（宏觀不顯著） | $\Delta q\Delta u \ge h/(4\pi m)$ | ✅（對應上課） |
 | 11.16 | Wavefunction normalization | 係數平方和 → 歸一因子 | ❌ 不考 |
 | 11.21 | Eigenfunction 判別 | $\hat{O}f = cf$ | ❌ 不考 |
-| 11.39 ⭐ | Bohr + de Broglie 連結 | $\lambda = 2\pi n a_0$, $C:\lambda = n$ | ✅ 老師例題 |
+| 11.39 | Bohr + de Broglie 連結 | $\lambda = 2\pi n a_0$, $C:\lambda = n$ | ✅（對應上課） |
 | 11.42 | Rydberg / Brackett series | $1/\lambda = R_H(1/n_1^2 - 1/n_2^2)$ | ✅ |
 
 **考試準備優先順序**：
-1. ⭐ **11.39**（Bohr velocity + de Broglie + $C:\lambda=n$）— 老師上課例題，極高可能考
-2. ⭐ **11.10**（Heisenberg $\Delta u$）— 老師上課例題
-3. **11.42**（Rydberg 代入不同 $n_1, n_2$）— 經典題型
+1. **11.39**（Bohr velocity + de Broglie + $C:\lambda=n$）
+2. **11.10**（Heisenberg $\Delta u$）
+3. **11.42**（Rydberg 代入不同 $n_1, n_2$）
 4. ❌ 11.16、11.21 可略過

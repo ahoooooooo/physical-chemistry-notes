@@ -107,7 +107,14 @@ window.UNITS_DATA = [
   {
     id: "final-review",
     title: "考前總複習",
-    subtitle: "（待補）",
-    placeholder: true
+    subtitle: "4/27 第二次期中考精華",
+    subs: [
+      {
+        id: "fr-all",
+        title: "考前總複習單頁",
+        summary: "Ch.3 p5下半~p13 + Ch.4 全部 + 三份作業題型速查",
+        pages: ["practice-final-review"]
+      }
+    ]
   }
 ];
