@@ -589,3 +589,123 @@ button, input { font: inherit; color: inherit; }
 @media (min-width: 1200px) {
   .reader { max-width: 760px; padding-left: 3rem; padding-right: 3rem; }
 }
+
+/* ---------- Print / PDF export ---------- */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  :root {
+    color-scheme: light;
+    /* 強制淺色變數，不理會 data-theme / prefers-color-scheme */
+    --bg: #fafaf9;
+    --surface: #ffffff;
+    --ink: #18181b;
+    --muted: #71717a;
+    --border: #e4e4e7;
+    --border-strong: #d4d4d8;
+    --accent: #4f46e5;
+    --accent-ink: #4338ca;
+    --accent-soft: #eef2ff;
+    --code-bg: #f4f4f5;
+    --code-ink: #be185d;
+    --shadow: none;
+  }
+
+  html,
+  body,
+  .site-main,
+  .reader,
+  #noteContent,
+  .math-block,
+  .note-content {
+    overflow: visible !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* 隱藏所有 UI 元件 */
+  .drawer,
+  .drawer-backdrop,
+  .site-header,
+  .page-pager,
+  .search-box,
+  #searchResults {
+    display: none !important;
+  }
+
+  /* 主要閱讀區全寬 */
+  .site-main,
+  .reader {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .reader-head { margin-bottom: 0.8rem; }
+  .page-title { font-size: 1.6rem; }
+
+  /* 標題不孤立 */
+  h1, h2, h3, h4,
+  .note-content h2,
+  .note-content h3,
+  .note-content h4 {
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  /* 重點內容不拆頁 */
+  .note-content table,
+  .note-content blockquote,
+  .note-content figure,
+  .note-figure,
+  .math-block,
+  pre,
+  mjx-container[display],
+  mjx-container[display="true"] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 媒體與表格寬度控制 */
+  img,
+  svg,
+  canvas,
+  .note-content table {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* MathJax SVG 專用 */
+  mjx-container[jax="SVG"] {
+    max-width: 100% !important;
+    overflow: visible !important;
+  }
+  mjx-container[jax="SVG"] > svg {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  /* display math 給一點縮放餘裕，降低爆寬機率 */
+  mjx-container[display],
+  mjx-container[display="true"] {
+    font-size: 0.95em !important;
+  }
+
+  /* code / 長 token 換行 */
+  pre { white-space: pre-wrap !important; }
+  pre,
+  code,
+  .note-content td,
+  .note-content th,
+  .note-content li {
+    overflow-wrap: anywhere;
+  }
+
+  /* 表格字級略縮，給 A4 多一點空間 */
+  .note-content table {
+    font-size: 0.9em;
+  }
+}

@@ -17,6 +17,7 @@ const drawer = document.querySelector("#drawer");
 const drawerBackdrop = document.querySelector("#drawerBackdrop");
 const menuBtn = document.querySelector("#menuBtn");
 const themeBtn = document.querySelector("#themeBtn");
+const exportBtn = document.querySelector("#exportBtn");
 const themeColorMeta = document.querySelector("#themeColorMeta");
 const pagePager = document.querySelector("#pagePager");
 const siteTitle = document.querySelector("#siteTitle");
@@ -518,6 +519,10 @@ function applyTheme(theme) {
 
 themeBtn?.addEventListener("click", () => {
   applyTheme(currentTheme() === "dark" ? "light" : "dark");
+});
+
+exportBtn?.addEventListener("click", () => {
+  window.print();
 });
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
