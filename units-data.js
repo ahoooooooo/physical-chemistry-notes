@@ -13,8 +13,8 @@ window.UNITS_DATA = [
       {
         id: "u3-activation",
         title: "Activation Energy from HS Theory",
-        summary: "head-on model、reactive cross section、Maxwell-Boltzmann 平均",
-        pages: ["ch3-page-03", "ch3-page-04"]
+        summary: "head-on model、reactive cross section、Maxwell-Boltzmann 平均、Arrhenius form、steric factor",
+        pages: ["ch3-page-03", "ch3-page-04", "ch3-page-05"]
       }
     ]
   },
