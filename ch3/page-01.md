@@ -23,9 +23,9 @@ tags:
 
 ## 1. 本章 Summary
 
-Ch.3 對應課本 9.8、9.9、9.11。主線有四條：
+Ch.3 對應課本 9.8、9.9、9.11。原頁右上角用橘字標出 **Hard sphere**，強調 summary 第 1 項用的就是 HS 模型。主線有四條：
 
-1. **Arrhenius law from HS collision theory**（← 本頁開始）
+1. **Arrhenius law from HS collision theory** ⭐ **1st 考試**（原頁橘字標記）
 2. **Transition State Theory (TST)** using classical thermodynamics
 3. **Potential Energy Surface (PES)**
 4. **Reaction dynamics**
