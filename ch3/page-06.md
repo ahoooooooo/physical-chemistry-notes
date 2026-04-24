@@ -30,18 +30,9 @@ tags:
 
 ## 2. Free Energy Diagram
 
-TST 把反應看成沿著 **reaction coordinate** 前進的過程。畫 $G$ 對 reaction coordinate：
+TST 把反應看成沿著 **reaction coordinate** 前進的過程。畫 $G$ 對 reaction coordinate，頂端是 transition state，兩側是 reactants 與 products：
 
-```
-G
-|          ‡ transition state
-|         ╱╲
-|        ╱  ╲
-|       ╱    ╲
-|      ╱      ╲____________
-|     ╱                   product
-|___reactant______________________→ reaction coordinate
-```
+![Reaction coordinate energy diagram with forward/reverse activation energy](images/activation-energy.png "標準 reaction coordinate diagram — 頂端是 TS、前向 $E_a(X\\to Y)$ 對應 $\\Delta^\\ddagger G_1^\\circ$、反向 $E_a(Y\\to X)$ 對應 $\\Delta^\\ddagger G_{-1}^\\circ$、$\\Delta H$ 對應 $\\Delta G^\\circ$（Wikipedia Commons）")
 
 原頁標出**三個自由能量**：
 

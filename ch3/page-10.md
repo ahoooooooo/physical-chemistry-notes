@@ -49,6 +49,10 @@ tags:
 
 所以它不是一般的「山頂」，而是「馬鞍形」。
 
+![2D contour PES for H+H2 reaction](images/pes-h-h2-contour.jpg "2D 等高線 PES（$H_a + H_b H_c \\leftrightarrow H_a H_b + H_c$）—— 概念等同 $A+BC \\to AB+C$：左上是 reactant valley、右下是 product valley、兩者之間的鞍點就是 transition state（Wikipedia Commons）")
+
+![3D potential energy surface (water molecule example)](images/pes-water-3d.png "3D PES 的視覺示意（以水分子幾何為例，$q_1$=鍵長、$q_2$=鍵角）—— PES 本質是多維曲面；反應性 PES 的具體幾何請對照上面的 2D 等高線圖（Wikipedia Commons）")
+
 ### 2.3 原頁的三張輔助剖面
 
 除了 3D 曲面和 2D 等高線外，原頁還畫了**三張一維剖面**幫助理解：
