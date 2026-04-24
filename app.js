@@ -247,6 +247,7 @@ const subById = new Map();
 for (const unit of units) {
   if (!unit.subs) continue;
   for (const sub of unit.subs) {
+    if (sub.divider) continue;
     const withUnit = { ...sub, unitId: unit.id, unitTitle: unit.title, unitSubtitle: unit.subtitle };
     subs.push(withUnit);
     subById.set(sub.id, withUnit);
@@ -283,6 +284,15 @@ function renderNav() {
     if (hasSubs) {
       parts.push(`<div class="sub-list">`);
       for (const sub of unit.subs) {
+        if (sub.divider) {
+          parts.push(
+            `<div class="sub-divider">
+              <span>${escapeHtml(sub.label || "")}</span>
+              ${sub.note ? `<small>${escapeHtml(sub.note)}</small>` : ""}
+            </div>`
+          );
+          continue;
+        }
         const active = sub.id === state.currentSubId ? " active" : "";
         parts.push(
           `<button class="sub-link${active}" data-sub="${sub.id}">

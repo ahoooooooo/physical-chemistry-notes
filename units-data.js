@@ -17,6 +17,11 @@ window.UNITS_DATA = [
         pages: ["ch3-page-03", "ch3-page-04", "ch3-page-05"]
       },
       {
+        divider: true,
+        label: "↓ 第二次段考範圍",
+        note: "p5 下半起 → Ch.4 全部"
+      },
+      {
         id: "u3-tst",
         title: "Transition State Theory",
         summary: "能障圖、兩個假設、Eyring form、ΔG‡/ΔH‡/ΔS‡、連到 Arrhenius",

@@ -221,6 +221,24 @@ button, input { font: inherit; color: inherit; }
 .sub-link.placeholder-link small {
   font-style: italic;
 }
+.sub-divider {
+  display: grid;
+  gap: 2px;
+  margin: 0.35rem 0 0.15rem;
+  padding: 0.3rem 0.55rem;
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.82rem;
+}
+.sub-divider span {
+  font-weight: 600;
+  color: var(--accent-ink);
+}
+.sub-divider small {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
 
 /* ---------- Search results ---------- */
 .search-results {
