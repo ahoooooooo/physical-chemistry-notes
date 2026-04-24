@@ -136,6 +136,28 @@ $$
 E = h\nu = \hbar\omega,\qquad \hbar = \frac{h}{2\pi}
 $$
 
+### Planck radiation law（⭐ 必背）
+
+$$
+\rho_\nu = \frac{8\pi h\nu^3}{c^3}\cdot\frac{1}{e^{h\nu/k_B T}-1}
+$$
+
+兩個極限：
+
+- **Rayleigh–Jeans**（低頻 $h\nu \ll k_B T$）：$e^{h\nu/k_B T}-1 \approx h\nu/k_B T$
+
+$$
+\rho_\nu \approx \frac{8\pi\nu^2}{c^3}\,k_B T
+$$
+
+高頻發散 → **紫外災難（UV catastrophe）**，Planck 引入量子化的動機。
+
+- **Wien 極限**（高頻 $h\nu \gg k_B T$）：$e^{h\nu/k_B T}-1 \approx e^{h\nu/k_B T}$
+
+$$
+\rho_\nu \approx \frac{8\pi h\nu^3}{c^3}\,e^{-h\nu/k_B T}
+$$
+
 ### Stefan-Boltzmann 定律
 
 $$

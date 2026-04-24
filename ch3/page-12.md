@@ -102,7 +102,7 @@ beam 幾何（原頁中段）：
 | 4 | **$\leftarrow A{-}B$**、$C\to$（AB 往回彈） |
 | 5 | $\leftarrow A{-}B$、$C\to$ 各自加速飛離 |
 
-![Rebound mechanism 5-step cartoon](images/rebound-5step.png "Rebound 5 步分解：head-on approach → 第 3 步的 $A{-}\\times{-}B{-}C$ 標記 TS → $AB$ 反彈回去（往左），$C$ 被推向右；產物帶有強 translational energy。")
+![Rebound mechanism 5-step cartoon](images/rebound-5step.png "Rebound 5 步分解：head-on approach → 第 3 步的 $A{-}\times{-}B{-}C$ 標記 TS → $AB$ 反彈回去（往左），$C$ 被推向右；產物帶有強 translational energy。")
 
 ### 3.6 產物能量分配
 

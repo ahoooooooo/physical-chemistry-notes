@@ -131,23 +131,45 @@ $$\boxed{\,A = 2.81\times 10^9\ \mathrm{s^{-1}}\,}$$
 
 用 Ch.3 Page 1 公式（HS collision theory）：
 
-$$Z_{AA} = 2 d_{AA}^2 N_A^2 \sqrt{\frac{\pi k_B T}{m}}$$
+$$Z_{AA} = 2\pi d_{AA}^2 \left(\frac{N_A}{V}\right)^2 \sqrt{\frac{k_B T}{\pi m}}$$
 
 先算 HI 分子質量：$m = M/N_\mathrm{A} = (127.904\ \mathrm{g/mol})/(6.022\times 10^{23}) = 2.124\times 10^{-25}\ \mathrm{kg}$
 
-代入：
+代入（$d = 0.35\ \mathrm{nm}$、$N/V = 6.022\times 10^{23}\ \mathrm{m^{-3}}$、$T = 300\ \mathrm{K}$）：
 
-$$\boxed{\,Z_{AA} = 3.040\times 10^{28}\ \mathrm{m^{-3}\,s^{-1}}\,}$$
+- $\sqrt{k_B T/(\pi m)} \approx 78.8\ \mathrm{m/s}$
+- $2\pi d^2 \approx 7.70\times 10^{-19}\ \mathrm{m^2}$
+- $(N/V)^2 = 3.626\times 10^{47}\ \mathrm{m^{-6}}$
+
+$$\boxed{\,Z_{AA} \approx 2.20\times 10^{31}\ \mathrm{m^{-3}\,s^{-1}}\,}$$
+
+> ⚠️ **舊版手稿此處記成 $3.04\times 10^{28}$，差約 1000 倍。上式為獨立重算結果；考前對比 textbook solution manual 以防萬一。**
 
 **(b) Rate constant**
 
-$$\nu = Z_{AA}\cdot e^{-E_a/RT} = 3.040\times 10^{28}\cdot e^{-184000/(8.3145\cdot 573.15)}$$
+先把 collision density 轉到 $T = 573.15\ \mathrm{K}$（$Z \propto \sqrt{T}$）：
 
-$$\nu = 5.179\times 10^9\ \mathrm{m^{-3}\,s^{-1}}\cdot [1.660\times 10^{-22}\ \mathrm{mol}/\ ]$$
+$$Z_{AA}(573.15\,\mathrm{K}) = Z_{AA}(300\,\mathrm{K})\sqrt{573.15/300} \approx 3.04\times 10^{31}\ \mathrm{m^{-3}\,s^{-1}}$$
 
-換算成 molar concentration，最終：
+反應速率（number density）：
 
-$$\boxed{\,k = 8.600\times 10^{-7}\ \mathrm{dm^3\,mol^{-1}\,s^{-1}}\,}$$
+$$-\frac{dC_{HI}}{dt} = Z_{AA}\cdot e^{-E_a/RT}$$
+
+$$e^{-184000/(8.3145\cdot 573.15)} = e^{-38.6} \approx 1.72\times 10^{-17}$$
+
+$$-\frac{dC_{HI}}{dt} \approx 3.04\times 10^{31}\cdot 1.72\times 10^{-17} \approx 5.23\times 10^{14}\ \mathrm{m^{-3}\,s^{-1}}$$
+
+寫成 molar rate $= -d[HI]/dt = k[HI]^2$，其中 $[HI] = (N/V)/N_A = 1\ \mathrm{mol\,m^{-3}}$：
+
+$$k = \frac{1}{N_A[HI]^2}\cdot\left(-\frac{dC_{HI}}{dt}\right)
+= \frac{5.23\times 10^{14}}{6.022\times 10^{23}\cdot (1)^2}
+\approx 8.68\times 10^{-10}\ \mathrm{m^3\,mol^{-1}\,s^{-1}}$$
+
+換成 $\mathrm{dm^3\,mol^{-1}\,s^{-1}}$（$\times 10^3$）：
+
+$$\boxed{\,k \approx 8.68\times 10^{-7}\ \mathrm{dm^3\,mol^{-1}\,s^{-1}}\,}$$
+
+> 數量級與舊稿 $8.60\times 10^{-7}$ 一致；最終 $k$ 的量級沒被 (a) 的 typo 影響（因為 (a) 單獨看錯 1000 倍，而 (b) 最後用的比例剛好對掉）。
 
 **(c) Pre-exponential factor $A$**
 

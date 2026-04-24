@@ -84,8 +84,10 @@ $$
 由熱力學：
 
 $$
-\Delta^\ddagger H = \underbrace{\Delta^\ddagger U}_{=\,E_a} + \underbrace{\Delta^\ddagger(PV)}_{=\,\Delta n^\ddagger RT}
+\Delta^\ddagger H = \Delta^\ddagger U + \underbrace{\Delta^\ddagger(PV)}_{=\,\Delta n^\ddagger RT}
 $$
+
+> ⚠️ **注意**：$\Delta^\ddagger U \ne E_a$。兩者由 Arrhenius 定義 $d\ln k/dT = E_a/RT^2$ 推出 $E_a = \Delta^\ddagger U + RT$（見下方）。
 
 其中對 ideal gas，$\Delta^\ddagger(PV) = \Delta n^\ddagger RT$，而
 
