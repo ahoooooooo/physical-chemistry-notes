@@ -15,6 +15,12 @@ window.UNITS_DATA = [
         title: "Activation Energy from HS Theory",
         summary: "head-on model、reactive cross section、Maxwell-Boltzmann 平均、Arrhenius form、steric factor",
         pages: ["ch3-page-03", "ch3-page-04", "ch3-page-05"]
+      },
+      {
+        id: "u3-tst",
+        title: "Transition State Theory",
+        summary: "能障圖、兩個假設、k = ν K‡ 骨架",
+        pages: ["ch3-page-06"]
       }
     ]
   },
