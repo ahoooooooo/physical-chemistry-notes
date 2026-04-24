@@ -352,18 +352,6 @@ function renderSub() {
     .map((slug) => notesBySlug.get(slug))
     .filter(Boolean);
 
-  const tagSet = new Set();
-  for (const note of pageNotes) {
-    if (Array.isArray(note.meta.tags)) {
-      for (const t of note.meta.tags) tagSet.add(t);
-    }
-  }
-  const tagRow = tagSet.size
-    ? `<div class="tag-row">${[...tagSet]
-        .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
-        .join("")}</div>`
-    : "";
-
   const pageBlocks = pageNotes
     .map((note) => {
       const chapterRaw = note.meta.chapter;
@@ -389,7 +377,7 @@ function renderSub() {
     })
     .join("");
 
-  noteContent.innerHTML = tagRow + pageBlocks;
+  noteContent.innerHTML = pageBlocks;
   renderNav();
   renderPager();
   history.replaceState(null, "", `?sub=${sub.id}`);
