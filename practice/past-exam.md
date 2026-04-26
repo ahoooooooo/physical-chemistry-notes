@@ -287,76 +287,192 @@ $$
 > CH₃I + hν → CH₃ + I.
 > The energy required to rupture the C–I bond is 209 kJ mol⁻¹. What are the velocities of I and CH₃, assuming all of the excess energy goes into translational motion? The atomic masses: C = 12, H = 1, I = 126.9. Please state all your assumptions.
 
-### Step 1：光子能量（per mol）
+### 物理圖像（先把場景想清楚）
+
+CH₃I 是線型分子（C-I 軸）。光照後 photon 把 C-I 鍵打斷：
+
+```
+[母分子靜止]                  [I 往一邊飛]    [CH₃ 往另一邊飛]
+   CH₃-I       + hν   →           ←•            •→
+   ●—●                                I              CH₃
+                                  (重的 → 慢)    (輕的 → 快)
+```
+
+兩個守恆律是這題的核心：
+
+- **能量守恆**：$h\nu - D_0 = KE_I + KE_{CH_3}$
+- **動量守恆**：母分子靜止 ⇒ 兩碎片動量**大小相等、方向相反**
+
+### Step 1：算光子能量（per mol）
+
+光子波長 $\lambda = 253.7\ \mathrm{nm}$。用速算式 $hc \approx 1240\ \mathrm{eV\cdot nm}$：
 
 $$
-E_\gamma = \frac{hc}{\lambda} = \frac{1240\ \text{eV·nm}}{253.7\ \text{nm}} = 4.888\ \text{eV}
+E_\gamma = \frac{hc}{\lambda} = \frac{1240}{253.7} = 4.888\ \mathrm{eV}
 $$
 
-換成 kJ/mol（用 $1\ \text{eV} = 96.485\ \text{kJ/mol}$）：
+換成每 mole 的能量（一個 photon 對應一個分子，所以 mole 對 mole）。用 $1\ \mathrm{eV} = 96.485\ \mathrm{kJ/mol}$：
 
 $$
-E_\gamma = 4.888 \times 96.485 = 471.6\ \text{kJ/mol}
+E_\gamma = 4.888 \times 96.485 = 471.6\ \mathrm{kJ/mol}
 $$
 
-### Step 2：可用平移動能
+> **為何乘 96.485？** $1\ \mathrm{eV/molecule} = 1.602\times 10^{-19}\ \mathrm{J/molecule}$，乘 $N_A = 6.022\times 10^{23}$ 得 $96.485\ \mathrm{kJ/mol}$。
+
+### Step 2：扣掉鍵能 → 算可用平移動能
+
+光子能量先用來「**斷鍵**」（吸收 209 kJ/mol），剩下的就是分給兩個碎片的動能。題目說「全部變平移動能」（即無轉動、無振動激發）：
 
 $$
-KE_{\text{tot}} = E_\gamma - D_0 = 471.6 - 209 = 262.6\ \text{kJ/mol}
+KE_{\mathrm{tot}} = E_\gamma - D_0
+= 471.6 - 209
+= 262.6\ \mathrm{kJ/mol}
 $$
 
-per molecule：
+換成每**個**分子（除以 $N_A$）：
 
 $$
-KE_{\text{tot}} = \frac{262.6\times10^{3}}{6.022\times10^{23}} = 4.36\times10^{-19}\ \text{J}
+KE_{\mathrm{tot}} = \frac{262.6\times 10^{3}\ \mathrm{J/mol}}{6.022\times 10^{23}\ \mathrm{mol^{-1}}}
+= 4.36\times 10^{-19}\ \mathrm{J/molecule}
 $$
 
-### Step 3：動量守恆 + 動能分配
+> 這就是兩個碎片**合計**得到的動能，下一步要分給 I 和 CH₃ 各多少。
 
-母分子原靜止 ⇒ $m_I v_I = m_C v_C$（CH₃ 記作 C，反向飛行）。
+### Step 3：用動量守恆找 I 和 CH₃ 的動能比
 
-設兩碎片動量大小 $p$，
+#### 3a. 動量守恆 → 兩碎片動量大小相等
+
+CH₃I 母分子在 lab frame 原本**靜止**（總動量 = 0）。光子動量 $h/\lambda \approx 2.6\times 10^{-27}\ \mathrm{kg\cdot m/s}$ 相對碎片動量極小，可忽略。所以：
 
 $$
-KE_{\text{tot}} = \frac{p^{2}}{2 m_I} + \frac{p^{2}}{2 m_C}
-= \frac{p^{2}}{2\mu},\quad
-\mu = \frac{m_I\,m_C}{m_I + m_C}
+\vec{p}_I + \vec{p}_{CH_3} = \vec{0}
+\;\Rightarrow\;
+|\vec{p}_I| = |\vec{p}_{CH_3}| \equiv p
 $$
 
-質量：
-- $m_I = 126.9 \times 1.6605\times10^{-27} = 2.107\times10^{-25}\ \text{kg}$
-- $m_C = 15.0 \times 1.6605\times10^{-27} = 2.491\times10^{-26}\ \text{kg}$
-- $\mu = \dfrac{(2.107\times10^{-25})(2.491\times10^{-26})}{2.356\times10^{-25}} = 2.228\times10^{-26}\ \text{kg}$
+設這個共同的動量大小為 $p$，方向相反。
+
+#### 3b. 用 $p$ 表達總動能 → 解出 $p$
+
+每個碎片的動能可以寫成 $KE = p^2/(2m)$（由 $KE = \tfrac12 mv^2$ 與 $p = mv$ 推出）：
+
+$$
+KE_{\mathrm{tot}} = KE_I + KE_{CH_3}
+= \frac{p^{2}}{2 m_I} + \frac{p^{2}}{2 m_{CH_3}}
+= \frac{p^{2}}{2}\!\left(\frac{1}{m_I} + \frac{1}{m_{CH_3}}\right)
+= \frac{p^{2}}{2\mu}
+$$
+
+其中 **reduced mass**：
+
+$$
+\mu = \frac{m_I\, m_{CH_3}}{m_I + m_{CH_3}}
+$$
+
+> **為什麼會冒出 reduced mass？** 因為兩碎片動量相等，但質量不同 → 動能不同。把 $1/m_I + 1/m_C$ 通分後分母正好是 $m_I + m_C$、分子是 $m_I m_C$，倒數即 reduced mass。**這是雙體分裂題的標準技巧**，記下來。
+
+#### 3c. 算 reduced mass
+
+換算質量到 SI 單位（amu → kg，乘 $1.6605\times 10^{-27}$）：
+
+$$
+m_I = 126.9 \times 1.6605\times 10^{-27}
+= 2.107\times 10^{-25}\ \mathrm{kg}
+$$
+
+$$
+m_{CH_3} = (12 + 3\times 1)\times 1.6605\times 10^{-27}
+= 15.0 \times 1.6605\times 10^{-27}
+= 2.491\times 10^{-26}\ \mathrm{kg}
+$$
+
+$$
+\mu = \frac{(2.107\times 10^{-25})(2.491\times 10^{-26})}{2.107\times 10^{-25} + 2.491\times 10^{-26}}
+= \frac{5.249\times 10^{-51}}{2.356\times 10^{-25}}
+= 2.228\times 10^{-26}\ \mathrm{kg}
+$$
+
+> 注意 $\mu$ 接近 $m_{CH_3}$（較輕者）— 這是 reduced mass 的特性：**$\mu$ 永遠 $\le$ 較輕者的質量**。
+
+#### 3d. 解 $p$
 
 $$
 \begin{aligned}
-p &= \sqrt{2\mu\,KE_{\text{tot}}}
- = \sqrt{2(2.228\times10^{-26})(4.36\times10^{-19})} \\
- &= \sqrt{1.943\times10^{-44}}
- = 1.394\times10^{-22}\ \text{kg·m/s}
+p &= \sqrt{2\mu\, KE_{\mathrm{tot}}} \\
+&= \sqrt{2\times (2.228\times 10^{-26}) \times (4.36\times 10^{-19})} \\
+&= \sqrt{1.943\times 10^{-44}} \\
+&= 1.394\times 10^{-22}\ \mathrm{kg\cdot m/s}
 \end{aligned}
 $$
 
-### Step 4：個別速度
+### Step 4：用 $p = mv$ 算個別速度
+
+兩個碎片動量大小一樣都是 $p$，速度由 $v = p/m$ 決定：
 
 $$
-v_I = \frac{p}{m_I} = \frac{1.394\times10^{-22}}{2.107\times10^{-25}}
-\approx \boxed{6.6\times10^{2}\ \text{m/s}}
+v_I = \frac{p}{m_I}
+= \frac{1.394\times 10^{-22}}{2.107\times 10^{-25}}
+\approx \boxed{6.6\times 10^{2}\ \mathrm{m/s}\ \;(\approx 660\ \mathrm{m/s})}
 $$
 
 $$
-v_{\text{CH}_3} = \frac{p}{m_C} = \frac{1.394\times10^{-22}}{2.491\times10^{-26}}
-\approx \boxed{5.6\times10^{3}\ \text{m/s}}
+v_{CH_3} = \frac{p}{m_{CH_3}}
+= \frac{1.394\times 10^{-22}}{2.491\times 10^{-26}}
+\approx \boxed{5.6\times 10^{3}\ \mathrm{m/s}\ \;(\approx 5600\ \mathrm{m/s})}
 $$
 
-檢驗：$v_C/v_I = m_I/m_C = 126.9/15 = 8.46$ ✓（與 $5600/660 \approx 8.5$ 吻合）。
+### Step 5：物理意義驗證（**寫題目記得做**）
 
-### 假設
+#### 一致性檢查 1：速度比 = 質量倒數比
 
-1. **母分子原靜止**（忽略熱運動的 ~ 100 m/s）
-2. **單光子吸收**（一個 CH₃I 配一個光子）
-3. **多餘能量全變平移動能**（碎片無轉動 / 振動激發）
-4. **動量守恆**（光子動量 $h/\lambda \sim 10^{-27}$ kg·m/s 比碎片動量小 5 個量級，可忽略）
+由 $m_I v_I = m_{CH_3} v_{CH_3}$（動量守恆）：
+
+$$
+\frac{v_{CH_3}}{v_I} = \frac{m_I}{m_{CH_3}}
+= \frac{126.9}{15.0} = 8.46
+$$
+
+驗證：$5600 / 660 \approx 8.48$ ✓
+
+> **重要結論**：**輕的碎片飛得快，重的碎片飛得慢**，速度反比於質量。
+
+#### 一致性檢查 2：動能分配比例
+
+兩碎片動能比：
+
+$$
+\frac{KE_I}{KE_{CH_3}} = \frac{p^2/(2m_I)}{p^2/(2m_{CH_3})}
+= \frac{m_{CH_3}}{m_I} = \frac{15}{126.9} = 0.118
+$$
+
+也就是 I 只拿到 $\frac{0.118}{1+0.118} = 10.6\%$ 的能量，CH₃ 拿到 $89.4\%$。
+
+驗證：
+- $KE_I = \tfrac12 m_I v_I^2 = \tfrac12(2.107\times 10^{-25})(660)^2 \approx 4.59\times 10^{-20}\ \mathrm{J}$
+- $KE_{CH_3} = \tfrac12 m_{CH_3} v_{CH_3}^2 = \tfrac12(2.491\times 10^{-26})(5600)^2 \approx 3.91\times 10^{-19}\ \mathrm{J}$
+- 合計 $\approx 4.37\times 10^{-19}\ \mathrm{J}$，與 Step 2 得到的 $4.36\times 10^{-19}\ \mathrm{J}$ 吻合 ✓
+
+> **直覺記憶**：輕的拿大部分動能（因為要保持動量相等就得跑快）；重的拿小部分動能（同樣動量但跑得慢）。
+
+### 假設清單（**題目要求 state all assumptions**）
+
+1. **母分子在 lab frame 靜止** — 忽略熱運動 $\sim 100\ \mathrm{m/s}$（比 $v_I$ 小一個量級，影響速度約 15%；嚴謹做法是用 c.o.m frame，但題目允許近似）
+2. **單光子吸收** — 一顆 CH₃I 吸收一顆 photon
+3. **多餘能量全變平移動能** — 即沒有 CH₃ 內部 vibrational/rotational excitation；如果有，平移動能會更少
+4. **動量守恆忽略 photon 動量** — $p_\gamma = h/\lambda \approx 2.6\times 10^{-27}\ \mathrm{kg\cdot m/s}$，比碎片動量 $1.4\times 10^{-22}$ 小**五個量級**，完全可忽略
+5. **C-I 鍵能 $D_0$ 即 dissociation threshold** — 不考慮 zero-point vibrational energy 修正
+6. **non-relativistic** — $v_{CH_3} \approx 5600\ \mathrm{m/s} \ll c$，牛頓力學適用
+
+### 解題口訣（光解離 / 雙體分裂題）
+
+```
+1. 算 hν     → 用 hc/λ 或 1240/λ
+2. 扣鍵能    → KE_tot = hν − D₀
+3. 動量守恆  → 兩碎片 |p| 相等
+4. KE = p²/(2μ) → 解出 p（μ 是 reduced mass）
+5. v = p/m   → 個別速度
+6. 驗證：v 反比於 m，KE 也反比於 m
+```
 
 ---
 
