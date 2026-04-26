@@ -303,10 +303,12 @@ $$
 - $\mu = \dfrac{(2.107\times10^{-25})(2.491\times10^{-26})}{2.356\times10^{-25}} = 2.228\times10^{-26}\ \text{kg}$
 
 $$
-p = \sqrt{2\mu\,KE_{\text{tot}}}
-= \sqrt{2(2.228\times10^{-26})(4.36\times10^{-19})}
-= \sqrt{1.943\times10^{-44}}
-= 1.394\times10^{-22}\ \text{kg·m/s}
+\begin{aligned}
+p &= \sqrt{2\mu\,KE_{\text{tot}}}
+ = \sqrt{2(2.228\times10^{-26})(4.36\times10^{-19})} \\
+ &= \sqrt{1.943\times10^{-44}}
+ = 1.394\times10^{-22}\ \text{kg·m/s}
+\end{aligned}
 $$
 
 ### Step 4：個別速度
