@@ -42,7 +42,13 @@ tags:
 
 ## Q1 (16%) — de Broglie 與分子間距
 
-> (a) O₂ 在 298 K 的 de Broglie wavelength？(b) 1 bar、298 K 下分子平均間距？(c) 室溫下 O₂ 是否需要量子處理？
+**原題（16%）**
+
+> (a) What is the de Broglie wavelength of an oxygen molecule at 298 K?
+> (b) Estimate the average distance between oxygen molecules in a gas at 1 bar and 298 K.
+> (c) Comment on whether quantum mechanical treatment is applicable to oxygen molecules at room temperature.
+>
+> Hint: you may use ideal gas assumptions.
 
 ### (a) de Broglie 波長
 
@@ -95,6 +101,24 @@ $\lambda \ll d$（差兩個數量級以上），因此分子的波動性**遠小
 ---
 
 ## Q2 (40%) — 多題綜合
+
+**原題（40%，共 (a)–(g) 七小題）**
+
+> (a) What is the uncertainty in velocity if we wish to locate an electron within an atom for which Δx = 0.5 Å? mₑ = 9.11 × 10⁻³¹ kg and h = 6.626 × 10⁻³⁴ J·s.
+>
+> (b) The lifetime of a molecule in a certain electronic state is 10⁻¹⁰ s. What is the uncertainty in energy of this state? Give your answer in J mol⁻¹.
+>
+> (c) Given the Rydberg equation, 1/λ = 109680 · Z² (1/n₁² − 1/n₂²) cm⁻¹, calculate the ionization energy of He⁺ in eV.
+>
+> (d) If the work function of K is 2.2 eV, calculate the maximum velocity of the electrons emitted when violet light of wavelength 400 nm is applied.
+>
+> (e) A laser emits a pulse of 1064 nm radiation with average power 5 × 10⁶ W (J/s) and duration 20 ns. Find the number of photons emitted in this pulse.
+>
+> (f) Planck's radiation theory finds that the average energy per oscillator is ε̄ = hν / [exp(hν/k_BT) − 1]. Derive the limiting result of ε̄ when quantization of energy is unimportant.
+>
+> (g) Given that the emission rate of the radiant energy per unit surface area and per unit frequency range of a blackbody is written as R(ν) = (2πν²/c²) · hν / [exp(hν/k_BT) − 1], show that the total radiant energy emitted per second by unit area of a blackbody is 2π⁵k_B⁴T⁴ / (15c²h³). The sun's diameter is 1.4 × 10⁹ m and its surface temperature is 5800 K. Assume the sun is a blackbody and estimate the rate of energy loss by radiation from the sun.
+>
+> Hint: ∫₀^∞ x³/(eˣ − 1) dx = π⁴/15.
 
 ### (a) 把電子限制在 $\Delta x = 0.5\ \text{Å}$ 內，速度不確定度？
 
@@ -209,7 +233,9 @@ $$
 R(\nu) = \frac{2\pi\nu^{2}}{c^{2}}\cdot \frac{h\nu}{\exp(h\nu/k_BT)-1}
 $$
 
-總輻射出射度：
+**$R(\nu)$ 的物理意義**：spectral radiant emittance — 黑體在頻率 $\nu$ 附近、單位頻率區間 $d\nu$、單位表面積、單位時間所放出的輻射能（單位 $\text{W}\cdot\text{m}^{-2}\cdot\text{Hz}^{-1}$）。
+
+**總輻射出射度** $M = \int_0^\infty R(\nu)\,d\nu$ 的物理意義：把所有頻率的貢獻加總，得到單位表面積每秒總放出的能量（$\text{W/m}^2$）。乘以表面積就是該物體的**總輻射功率**（光度）：
 
 $$
 M = \int_{0}^{\infty} R(\nu)\,d\nu
@@ -222,7 +248,7 @@ $$
 M = \frac{2\pi h}{c^{2}} \left(\frac{k_BT}{h}\right)^{4} \int_{0}^{\infty}\frac{x^{3}}{e^{x}-1}dx
 $$
 
-用提示 $\int_0^\infty x^3/(e^x-1)\,dx = \pi^4/15$：
+用提示 $\int_0^\infty x^3/(e^x-1)\,dx = \pi^4/15$（這是 Bose–Einstein 形式的標準積分；用級數展開 $1/(e^x-1)=\sum_{n\ge1}e^{-nx}$ 並逐項積分得 $\Gamma(4)\,\zeta(4)=6\cdot\pi^4/90=\pi^4/15$，是讓 Stefan–Boltzmann 常數能寫成純常數的關鍵）：
 
 $$
 \boxed{M = \frac{2\pi^{5}\,k_B^{4}\,T^{4}}{15\,c^{2}\,h^{3}} \equiv \sigma T^{4}}
@@ -259,7 +285,11 @@ $$
 
 ## Q3 (20%) — CH₃I 光解離後 I 與 CH₃ 的速度
 
-> CH₃I + $h\nu$（253.7 nm）→ CH₃ + I，C–I 鍵能 = 209 kJ/mol。求兩碎片的速度（假設多餘能量全變平移動能）。
+**原題（20%）**
+
+> When CH₃I molecules in the vapor state absorb 253.7 nm light, the following reaction occurs:
+> CH₃I + hν → CH₃ + I.
+> The energy required to rupture the C–I bond is 209 kJ mol⁻¹. What are the velocities of I and CH₃, assuming all of the excess energy goes into translational motion? The atomic masses: C = 12, H = 1, I = 126.9. Please state all your assumptions.
 
 ### Step 1：光子能量（per mol）
 
@@ -336,7 +366,17 @@ $$
 
 ## Q4 (24%) — 波函數合法性 + 動量本徵函數
 
-> (a) 4 個函數在指定區間是否為合法波函數？(b) 合法者是否為 $\hat p_x = -i\hbar\,d/dx$ 的本徵函數？
+**原題（24%）**
+
+> Consider the following functions:
+> (i) tan⁻¹ x for 0 ≤ x ≤ ∞,
+> (ii) e⁻ˣ sin x for 0 ≤ x ≤ ∞,
+> (iii) 1/x² for −1 ≤ x ≤ 1,
+> (iv) x²(L − x) for 0 ≤ x ≤ L.
+>
+> (a) Determine and explain whether each of them is acceptable as a wavefunction over the indicated interval.
+>
+> (b) For each acceptable one, determine and explain whether it is an eigenfunction of the linear momentum operator p̂ₓ = −iℏ d/dx.
 
 ### 合法波函數的條件
 
