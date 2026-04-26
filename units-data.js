@@ -106,8 +106,15 @@ window.UNITS_DATA = [
   {
     id: "past-exams",
     title: "考古題",
-    subtitle: "（待補）",
-    placeholder: true
+    subtitle: "歷屆題目 + 詳解",
+    subs: [
+      {
+        id: "past-exam",
+        title: "第二次期中考考古題",
+        summary: "5 題：de Broglie / Heisenberg / Rydberg / 光電 / 雷射 / Planck-Stefan / CH3I 光解離 / 波函數合法性",
+        pages: ["practice-past-exam"]
+      }
+    ]
   },
   {
     id: "final-review",
