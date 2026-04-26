@@ -36,6 +36,19 @@ tags:
 
 ## Ch.3 — Transition State Theory 核心
 
+### 0. TST 兩大假設（核心起點）
+
+1. Reactants 與 transition state $X^\ddagger$ 處於**準平衡**：$K^\ddagger = [X^\ddagger]/\prod[\text{reactants}]$
+2. $X^\ddagger$ 沿反應座標的振動頻率 $\nu = k_BT/h$ 即「跨過 barrier」的頻率
+
+由此得出 Eyring 起手式：
+
+$$
+k = \nu\,K^\ddagger = \frac{k_BT}{h}\,K^\ddagger
+$$
+
+代入 $\Delta^\ddagger G^\circ = -RT\ln K^\ddagger$ 即得下面的 Eyring 方程式。
+
 ### 1. Eyring 方程式（**必背**）
 
 $$
@@ -79,6 +92,15 @@ $$
 ---
 
 ## Ch.3 — PES 與反應動力學
+
+### 0. PES 基本元素
+
+- **Reactant valley / Product valley**：能量低谷，反應前後兩側
+- **Saddle point** $X^\ddagger$：兩谷之間的能量最高點（反應座標方向是「下坡」，正交方向是「上坡」）
+- **Reaction path**：從 reactant 谷沿最低能量路徑經過 saddle point 到 product 谷
+- **Barrier height** = saddle point 與 reactant 谷的能量差
+
+> 後面所有 stripping / rebound / early-late barrier 的討論都建立在這套幾何語言上。
 
 ### Stripping vs Rebound 對照（**考試重點**）
 
@@ -129,13 +151,21 @@ $$
 
 ## Ch.4 — 黑體輻射
 
+### 0. 黑體（Blackbody）定義
+
+- **完美吸收體**：吸收所有入射輻射、不反射不透射
+- **發射 spectrum 只依溫度** $T$（與材質無關）— 這是普適性的關鍵
+- 實驗實作：**有小孔的空腔** — 任何進入小孔的光幾乎不會出來
+
 ### Planck 的量子化假設
 
-光子能量必須為 $\hbar\omega$ 的整數倍：
+振子的能級**量子化**為 $h\nu$ 的整數倍（不是「光子能量量子化」，而是物質振子能量量子化）：
 
 $$
-E = h\nu = \hbar\omega,\qquad \hbar = \frac{h}{2\pi}
+\varepsilon_n = n\,h\nu = n\,\hbar\omega,\quad n = 0, 1, 2,\ldots
 $$
+
+單個 photon 能量為 $h\nu = \hbar\omega$。常數 $\hbar = h/2\pi$。
 
 ### Planck radiation law（⭐ 必背）
 
@@ -175,6 +205,16 @@ $$
 
 ## Ch.4 — 光電效應 / Compton
 
+### 0. 三個古典理論解釋不了的實驗觀察
+
+| 觀察 | 古典預測 | 實驗事實 |
+|---|---|---|
+| **Threshold frequency** $\nu_0$ | 任何頻率夠強就能打出電子 | 低於 $\nu_0$ 完全沒電子，與強度無關 |
+| **電子最大動能 $KE_{\max}$** | 隨光強度增加 | **只**隨頻率增加，與強度無關 |
+| **電子數量** | 隨頻率增加 | 隨**強度**增加，與頻率無關 |
+
+→ Einstein 用「光是離散光子，每顆能量 $h\nu$」一次解釋三個觀察。
+
 ### Einstein 光電方程（**HW4 11.13**）
 
 $$
@@ -207,7 +247,16 @@ $$
 
 - 角動量量子化：$L = mur = n\dfrac{h}{2\pi}$
 - 定態不輻射
-- 能階間躍遷放/吸光子：$h\nu = E_m - E_n$
+- 能階間躍遷放/吸光子：$h\nu = E_{\text{upper}} - E_{\text{lower}}$（emission：高能 → 低能放出 photon；absorption 反向）
+
+### 1.5 能量結構（**易錯**）
+
+- $E_k = \tfrac12 m u^2 = +\dfrac{Ze^2}{8\pi\varepsilon_0\,r}$
+- $E_p = -\dfrac{Ze^2}{4\pi\varepsilon_0\,r}$（**負**，束縛態）
+- 由 (1) 式聯立得 **virial 關係**：$E_p = -2E_k$，故 $E = E_k + E_p = -E_k$（**總能為負**，束縛）
+- **Ionization energy**：$E_{\text{ion}} = -E_n = +\dfrac{Z^2}{n^2}\cdot 13.6\ \mathrm{eV}$（**正值**，要供給的能量）
+
+> ⚠️ 考試陷阱：寫 $E_n$ 一定帶**負號**；寫 ionization energy（從 $n$ 游離到 $\infty$ 的能差）才是**正值**。
 
 ### 2. 軌道半徑與速度
 
@@ -257,6 +306,22 @@ $$
 2\pi r = n\lambda \;\Rightarrow\; \lambda = \frac{2\pi r}{n} = 2\pi n a_0\ (Z=1)
 $$
 
+**實驗證據**：electron diffraction（Davisson–Germer）— 加速電子打 Ni 晶體，看到 X-ray 般的繞射圖樣。
+
+**典型例題**：100 V 加速的電子
+
+$$
+KE = eV = 100\ \mathrm{eV} = 1.602\times 10^{-17}\ \mathrm{J}
+$$
+
+$$
+\lambda = \frac{h}{\sqrt{2 m_e\,KE}}
+= \frac{6.626\times 10^{-34}}{\sqrt{2(9.11\times 10^{-31})(1.602\times 10^{-17})}}
+\approx 1.23\ \mathrm{Å}
+$$
+
+→ 與晶格常數同一量級，所以才能繞射。
+
 ### 2. Heisenberg 不確定原理（**HW5 11.10**）
 
 $$
@@ -270,6 +335,17 @@ $$
 $$
 
 也有能量-時間形式：$\Delta E\cdot\Delta t \ge \hbar/2$
+
+**應用：自然線寬（natural linewidth）**
+
+激發態壽命 $\tau$ 短 → $\Delta E$ 大 → 譜線變寬：
+
+$$
+\Delta E \ge \frac{\hbar}{2\tau},\qquad
+\Delta\nu = \frac{\Delta E}{h} \ge \frac{1}{4\pi\tau}
+$$
+
+> 短壽命 → 寬譜線（這是考古題 Q2(b) 的核心觀念）。
 
 **物理意義**：宏觀粒子（$m$ 大）→ $\Delta u$ 很小 → 不重要；微觀粒子（電子）→ $\Delta u$ 巨大 → 決定性影響。
 
@@ -323,9 +399,16 @@ $$
 
 **步驟 1（量子化能級）**：振子能量 $\varepsilon_n = nh\nu$。
 
-**步驟 2（Boltzmann 分布）**：$N_n \propto e^{-nh\nu/k_BT}$。令 $x = e^{-h\nu/k_BT}$。
+**步驟 2（Boltzmann 分布）**：$N_n \propto e^{-nh\nu/k_BT}$。令 $x = e^{-h\nu/k_BT}$（$0 < x < 1$）。
 
-**步驟 3（平均能量）**：
+**步驟 3（級數求和）**：用幾何級數
+
+$$
+\sum_{n=0}^{\infty} x^n = \frac{1}{1-x},\qquad
+\sum_{n=0}^{\infty} n\,x^n = \frac{x}{(1-x)^2}
+$$
+
+代入平均能量：
 
 $$
 \langle\varepsilon\rangle
@@ -385,11 +468,22 @@ $$
 \quad\text{其中}\;a_0 = \frac{4\pi\varepsilon_0\hbar^2}{me^2}
 $$
 
-能量：$E_k = \tfrac12 m u^2$，$E_p = -\dfrac{Ze^2}{4\pi\varepsilon_0\,r}$。由 (1) 得 $E_p = -2E_k$（virial），故 $E = E_k + E_p = -E_k$：
+**能量分解**：
+
+$$
+E_k = \tfrac12 m u^2,\qquad
+E_p = -\dfrac{Ze^2}{4\pi\varepsilon_0\,r}
+$$
+
+由 (1) 式 $\dfrac{m u^2}{r} = \dfrac{Ze^2}{4\pi\varepsilon_0\,r^2}$ 得 $m u^2 r = \dfrac{Ze^2}{4\pi\varepsilon_0}$，即 $|E_p| = 2 E_k$，故 **virial 關係 $E_p = -2 E_k$**。
+
+總能 $E = E_k + E_p = -E_k$（負，束縛態）：
 
 $$
 \boxed{E_n = -\frac{Z^2}{n^2}\cdot 13.6\ \mathrm{eV}}
 $$
+
+**Ionization energy**：$E_{\text{ion}} = E(\infty) - E_n = -E_n = +\dfrac{Z^2}{n^2}\cdot 13.6\ \mathrm{eV}$（正，要供給的能量）。
 
 ### D7. de Broglie + 駐波 → Bohr 量子化（自然解釋）
 
@@ -554,13 +648,14 @@ $$
 
 ---
 
-## 考試臨場 checklist
+## 考試臨場確認項
 
-- [ ] 題目給氣相/液相？bimolecular/unimolecular？→ 決定 $E_a$ 修正是 $+RT$ 還是 $+2RT$
-- [ ] 單位：$A$ 帶 $\mathrm{dm^3\,mol^{-1}\,s^{-1}}$ 還是 $\mathrm{s^{-1}}$？
-- [ ] Rydberg 題目給 $n_1, n_2$？注意 $n_1 < n_2$ 才有正的 $1/\lambda$
-- [ ] Bohr 題目牽涉到 $Z$ 嗎？氫原子 $Z=1$ 可略；He⁺ / Li²⁺ 不能
-- [ ] 光電效應：$\phi$ 是 eV 還是 J？先統一單位再代
+- 題目給氣相/液相？bimolecular/unimolecular？→ 決定 $E_a$ 修正是 $+RT$ 還是 $+2RT$
+- 單位：$A$ 帶 $\mathrm{dm^3\,mol^{-1}\,s^{-1}}$ 還是 $\mathrm{s^{-1}}$？
+- Rydberg 題目給 $n_1, n_2$？注意 $n_1 < n_2$ 才有正的 $1/\lambda$
+- Bohr 題目牽涉到 $Z$ 嗎？氫原子 $Z=1$ 可略；He⁺ / Li²⁺ 不能
+- 光電效應：$\phi$ 是 eV 還是 J？先統一單位再代
+- $E_n$ 是負值；ionization energy 是正值（不要記反！）
 
 ---
 
