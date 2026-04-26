@@ -42,15 +42,11 @@ tags:
 
 ## Q1 (16%) — de Broglie 與分子間距
 
-**原題（16%）**
-
-> (a) What is the de Broglie wavelength of an oxygen molecule at 298 K?
-> (b) Estimate the average distance between oxygen molecules in a gas at 1 bar and 298 K.
-> (c) Comment on whether quantum mechanical treatment is applicable to oxygen molecules at room temperature.
->
 > Hint: you may use ideal gas assumptions.
 
 ### (a) de Broglie 波長
+
+> **原題 (a)**: What is the de Broglie wavelength of an oxygen molecule at 298 K?
 
 用 $v_{\text{rms}}$（thermal average）：$\frac12 m v^2 = \frac32 k_BT$
 
@@ -75,6 +71,8 @@ $$
 
 ### (b) 分子平均間距
 
+> **原題 (b)**: Estimate the average distance between oxygen molecules in a gas at 1 bar and 298 K.
+
 理想氣體 $PV = N k_B T$：
 
 $$
@@ -92,6 +90,8 @@ $$
 
 ### (c) 是否需量子處理
 
+> **原題 (c)**: Comment on whether quantum mechanical treatment is applicable to oxygen molecules at room temperature.
+
 $$
 \frac{d}{\lambda} \approx \frac{3.45\times10^{-9}}{2.59\times10^{-11}} \approx 130
 $$
@@ -100,27 +100,11 @@ $\lambda \ll d$（差兩個數量級以上），因此分子的波動性**遠小
 
 ---
 
-## Q2 (40%) — 多題綜合
-
-**原題（40%，共 (a)–(g) 七小題）**
-
-> (a) What is the uncertainty in velocity if we wish to locate an electron within an atom for which Δx = 0.5 Å? mₑ = 9.11 × 10⁻³¹ kg and h = 6.626 × 10⁻³⁴ J·s.
->
-> (b) The lifetime of a molecule in a certain electronic state is 10⁻¹⁰ s. What is the uncertainty in energy of this state? Give your answer in J mol⁻¹.
->
-> (c) Given the Rydberg equation, 1/λ = 109680 · Z² (1/n₁² − 1/n₂²) cm⁻¹, calculate the ionization energy of He⁺ in eV.
->
-> (d) If the work function of K is 2.2 eV, calculate the maximum velocity of the electrons emitted when violet light of wavelength 400 nm is applied.
->
-> (e) A laser emits a pulse of 1064 nm radiation with average power 5 × 10⁶ W (J/s) and duration 20 ns. Find the number of photons emitted in this pulse.
->
-> (f) Planck's radiation theory finds that the average energy per oscillator is ε̄ = hν / [exp(hν/k_BT) − 1]. Derive the limiting result of ε̄ when quantization of energy is unimportant.
->
-> (g) Given that the emission rate of the radiant energy per unit surface area and per unit frequency range of a blackbody is written as R(ν) = (2πν²/c²) · hν / [exp(hν/k_BT) − 1], show that the total radiant energy emitted per second by unit area of a blackbody is 2π⁵k_B⁴T⁴ / (15c²h³). The sun's diameter is 1.4 × 10⁹ m and its surface temperature is 5800 K. Assume the sun is a blackbody and estimate the rate of energy loss by radiation from the sun.
->
-> Hint: ∫₀^∞ x³/(eˣ − 1) dx = π⁴/15.
+## Q2 (40%) — 多題綜合（共 (a)–(g) 七小題）
 
 ### (a) 把電子限制在 $\Delta x = 0.5\ \text{Å}$ 內，速度不確定度？
+
+> **原題 (a)**: What is the uncertainty in velocity if we wish to locate an electron within an atom for which Δx = 0.5 Å? mₑ = 9.11 × 10⁻³¹ kg and h = 6.626 × 10⁻³⁴ J·s.
 
 Heisenberg：$\Delta x\,\Delta p_x \ge \hbar/2$，所以 $\Delta v \ge \hbar/(2 m_e\,\Delta x)$。
 
@@ -132,6 +116,8 @@ $$
 > 觀念：原子尺度限制電子位置 → 速度不確定度已達 ~10⁶ m/s 量級，明顯量子。
 
 ### (b) 電子態 lifetime $\tau = 10^{-10}\ \text{s}$，$\Delta E$？
+
+> **原題 (b)**: The lifetime of a molecule in a certain electronic state is 10⁻¹⁰ s. What is the uncertainty in energy of this state? Give your answer in J mol⁻¹.
 
 Energy-time 不確定關係 $\Delta E\,\Delta t \ge \hbar/2$：
 
@@ -152,7 +138,9 @@ $$
 
 ### (c) He⁺ 游離能（用 Rydberg）
 
-題目給 $1/\lambda = 109680\,Z^2(1/n_1^2 - 1/n_2^2)\ \text{cm}^{-1}$。He⁺ 的 $Z=2$，游離 ionization 對應 $n_1=1,\ n_2=\infty$：
+> **原題 (c)**: Given the Rydberg equation, 1/λ = 109680 · Z² (1/n₁² − 1/n₂²) cm⁻¹, calculate the ionization energy of He⁺ in eV.
+
+He⁺ 的 $Z=2$，游離 ionization 對應 $n_1=1,\ n_2=\infty$：
 
 $$
 \tilde\nu = 109680 \times 4 \times \left(1 - 0\right) = 4.387\times10^{5}\ \text{cm}^{-1}
@@ -172,6 +160,8 @@ $$
 
 ### (d) 光電效應：K 在 400 nm 下發射電子的最大速度
 
+> **原題 (d)**: If the work function of K is 2.2 eV, calculate the maximum velocity of the electrons emitted when violet light of wavelength 400 nm is applied.
+
 $\phi = 2.2\ \text{eV}$，光子能量 $h\nu = hc/\lambda = 1240/400 = 3.10\ \text{eV}$。
 
 $$
@@ -185,6 +175,8 @@ v_{\max} = \sqrt{\frac{2\,KE_{\max}}{m_e}}
 $$
 
 ### (e) 雷射 1064 nm，$\bar{P}=5\times10^{6}\ \text{W}$，pulse 20 ns，光子數？
+
+> **原題 (e)**: A laser emits a pulse of 1064 nm radiation with average power 5 × 10⁶ W (J/s) and duration 20 ns. Find the number of photons emitted in this pulse.
 
 Pulse 總能：
 
@@ -207,6 +199,8 @@ $$
 
 ### (f) Planck 振子平均能量在「量子化不重要」極限
 
+> **原題 (f)**: Planck's radiation theory finds that the average energy per oscillator is ε̄ = hν / [exp(hν/k_BT) − 1]. Derive the limiting result of ε̄ when quantization of energy is unimportant.
+
 $$
 \bar\varepsilon = \frac{h\nu}{\exp(h\nu/k_BT)-1}
 $$
@@ -226,6 +220,8 @@ $$
 > 這就是**古典 equipartition** 結果（每個自由度 $\tfrac12 k_BT$，振子兩個自由度共 $k_BT$）。對應 Rayleigh–Jeans 在低頻的成功，但全頻積分發散 → ultraviolet catastrophe。
 
 ### (g) 從 R(ν) 推 Stefan–Boltzmann，估算太陽輻射功率
+
+> **原題 (g)**: Given that the emission rate of the radiant energy per unit surface area and per unit frequency range of a blackbody is written as R(ν) = (2πν²/c²) · hν / [exp(hν/k_BT) − 1], show that the total radiant energy emitted per second by unit area of a blackbody is 2π⁵k_B⁴T⁴ / (15c²h³). The sun's diameter is 1.4 × 10⁹ m and its surface temperature is 5800 K. Assume the sun is a blackbody and estimate the rate of energy loss by radiation from the sun. Hint: ∫₀^∞ x³/(eˣ − 1) dx = π⁴/15.
 
 題目給：
 
@@ -366,17 +362,11 @@ $$
 
 ## Q4 (24%) — 波函數合法性 + 動量本徵函數
 
-**原題（24%）**
-
-> Consider the following functions:
+> **共同前提**: Consider the following functions:
 > (i) tan⁻¹ x for 0 ≤ x ≤ ∞,
 > (ii) e⁻ˣ sin x for 0 ≤ x ≤ ∞,
 > (iii) 1/x² for −1 ≤ x ≤ 1,
 > (iv) x²(L − x) for 0 ≤ x ≤ L.
->
-> (a) Determine and explain whether each of them is acceptable as a wavefunction over the indicated interval.
->
-> (b) For each acceptable one, determine and explain whether it is an eigenfunction of the linear momentum operator p̂ₓ = −iℏ d/dx.
 
 ### 合法波函數的條件
 
@@ -386,6 +376,8 @@ $$
 4. **平方可積**（$\int|\psi|^{2}dx < \infty$）
 
 ### (a) 逐一檢查
+
+> **原題 (a)**: Determine and explain whether each of them is acceptable as a wavefunction over the indicated interval.
 
 #### (i) $\tan^{-1} x$，$0 \le x \le \infty$
 
@@ -417,6 +409,8 @@ $$
 → **合法**。
 
 ### (b) 是否為 $\hat p_x$ 本徵函數？
+
+> **原題 (b)**: For each acceptable one, determine and explain whether it is an eigenfunction of the linear momentum operator p̂ₓ = −iℏ d/dx.
 
 $\hat p_x = -i\hbar\,d/dx$。本徵：$\hat p_x \psi = c\psi$（$c$ 為常數）。
 
