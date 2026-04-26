@@ -201,7 +201,7 @@ $$
 
 > 這就是**古典 equipartition** 結果（每個自由度 $\tfrac12 k_BT$，振子兩個自由度共 $k_BT$）。對應 Rayleigh–Jeans 在低頻的成功，但全頻積分發散 → ultraviolet catastrophe。
 
-### (g) 從 $R(\nu)$ 推 Stefan–Boltzmann，估算太陽輻射功率
+### (g) 從 R(ν) 推 Stefan–Boltzmann，估算太陽輻射功率
 
 題目給：
 
