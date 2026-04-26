@@ -467,7 +467,7 @@ $$
 |---|---|
 | 1 | 算 $h\nu$ — 用 $hc/\lambda$ 或速算 $1240/\lambda$（eV·nm） |
 | 2 | 扣鍵能 — $KE_{\text{tot}} = h\nu - D_0$ |
-| 3 | 動量守恆 — 兩碎片 $|\vec{p}|$ 相等 |
+| 3 | 動量守恆 — 兩碎片 $\lvert\vec{p}\rvert$ 相等 |
 | 4 | $KE_{\text{tot}} = p^2/(2\mu)$ — 解出 $p$（$\mu$ 是 reduced mass） |
 | 5 | $v = p/m$ — 個別速度 |
 | 6 | 驗證 — $v$ 反比於 $m$，$KE$ 也反比於 $m$ |
