@@ -12,6 +12,7 @@ sections:
   - Ch.4 光電 / Compton
   - Ch.4 Bohr / Rydberg
   - Ch.4 de Broglie / Heisenberg
+  - 重要推導集
   - 作業題型速查
 tags:
   - final review
@@ -271,6 +272,168 @@ $$
 也有能量-時間形式：$\Delta E\cdot\Delta t \ge \hbar/2$
 
 **物理意義**：宏觀粒子（$m$ 大）→ $\Delta u$ 很小 → 不重要；微觀粒子（電子）→ $\Delta u$ 巨大 → 決定性影響。
+
+---
+
+## 重要推導集（**可能要寫過程**）
+
+### D1. Eyring → Arrhenius：$E_a$ 與 $\Delta^\ddagger H^\circ$ 的對應（用 van't Hoff）
+
+**起點**：TST 表示
+
+$$
+k = \frac{k_BT}{h}\,K^\ddagger
+$$
+
+對 $T$ 取對數微分：
+
+$$
+\frac{d\ln k}{dT} = \frac{1}{T} + \frac{d\ln K^\ddagger}{dT}
+$$
+
+由 van't Hoff：$\dfrac{d\ln K^\ddagger}{dT} = \dfrac{\Delta^\ddagger U^\circ}{RT^2}$
+
+由 Arrhenius 定義：$\dfrac{d\ln k}{dT} = \dfrac{E_a}{RT^2}$
+
+合併：
+
+$$
+\boxed{E_a = \Delta^\ddagger U^\circ + RT}
+$$
+
+再用 $H = U + PV$：$\Delta^\ddagger H^\circ = \Delta^\ddagger U^\circ + P\Delta^\ddagger V^\circ$，所以
+
+$$
+E_a = \Delta^\ddagger H^\circ - P\Delta^\ddagger V^\circ + RT
+$$
+
+### D2. 為何氣相 bimolecular 是 $+2RT$？
+
+對理想氣體：$P\Delta^\ddagger V^\circ = (\Delta n^\ddagger)RT$，其中 $\Delta n^\ddagger = n_{\text{TS}} - n_{\text{reactants}}$。
+
+| 情境 | $\Delta n^\ddagger$ | $E_a$ |
+|---|---|---|
+| 氣相 unimolecular（A → A‡） | $0$ | $\Delta^\ddagger H^\circ + RT$ |
+| 氣相 bimolecular（A+B → AB‡） | $-1$ | $\Delta^\ddagger H^\circ + 2RT$ |
+| 液相 | $\approx 0$（$\Delta V \approx 0$） | $\Delta^\ddagger H^\circ + RT$ |
+
+> 兩個分子合成一個 TS 時氣體莫耳數減 1，產生 $-(-1)RT = +RT$ 的額外項，加上原本的 $RT$ → **共 $+2RT$**。
+
+### D3. Planck 公式推導（Boltzmann + 量子化）
+
+**步驟 1（量子化能級）**：振子能量 $\varepsilon_n = nh\nu$。
+
+**步驟 2（Boltzmann 分布）**：$N_n \propto e^{-nh\nu/k_BT}$。令 $x = e^{-h\nu/k_BT}$。
+
+**步驟 3（平均能量）**：
+
+$$
+\langle\varepsilon\rangle
+= \frac{\sum_{n=0}^{\infty} nh\nu\,x^n}{\sum_{n=0}^{\infty} x^n}
+= h\nu\cdot\frac{x/(1-x)^2}{1/(1-x)}
+= \frac{h\nu\,x}{1-x}
+$$
+
+代回 $x$：
+
+$$
+\boxed{\langle\varepsilon\rangle = \frac{h\nu}{e^{h\nu/k_BT}-1}}
+$$
+
+**步驟 4**：乘上模式密度 $g(\nu) = 8\pi\nu^2/c^3$ 得 Planck radiation law。
+
+### D4. Rayleigh–Jeans 極限與 UV catastrophe
+
+當 $h\nu \ll k_BT$，$e^{h\nu/k_BT}-1 \approx h\nu/k_BT$，故
+
+$$
+\langle\varepsilon\rangle \to k_BT\quad\text{（古典 equipartition）}
+$$
+
+$$
+\rho_\nu \to \frac{8\pi\nu^2}{c^3}\,k_BT \;\propto\; \nu^2
+$$
+
+**全頻積分發散** $\int_0^\infty \nu^2\,d\nu = \infty$ → 紫外災難。Planck 用量子化才壓住高頻。
+
+### D5. Stefan–Boltzmann 從 Planck 積分
+
+$$
+M = \int_0^\infty \frac{2\pi h\nu^3}{c^2(e^{h\nu/k_BT}-1)}\,d\nu
+$$
+
+換元 $x = h\nu/k_BT$：
+
+$$
+M = \frac{2\pi h}{c^2}\left(\frac{k_BT}{h}\right)^4\int_0^\infty\frac{x^3}{e^x-1}\,dx
+= \frac{2\pi^5 k_B^4}{15\,c^2 h^3}\,T^4 \equiv \sigma T^4
+$$
+
+關鍵積分 $\int_0^\infty x^3/(e^x-1)\,dx = \Gamma(4)\zeta(4) = 6\cdot\pi^4/90 = \pi^4/15$。
+
+### D6. Bohr 模型完整推導
+
+**兩條方程聯立**：
+
+1. 向心力 = Coulomb：$\dfrac{m u^2}{r} = \dfrac{Ze^2}{4\pi\varepsilon_0\,r^2}$
+2. 角動量量子化：$m u r = n\hbar$
+
+由 (2)：$u = n\hbar/(mr)$，代入 (1)：
+
+$$
+\boxed{r_n = \frac{4\pi\varepsilon_0\,n^2\hbar^2}{Z\,m e^2} = \frac{n^2 a_0}{Z}}
+\quad\text{其中}\;a_0 = \frac{4\pi\varepsilon_0\hbar^2}{me^2}
+$$
+
+能量：$E_k = \tfrac12 m u^2$，$E_p = -\dfrac{Ze^2}{4\pi\varepsilon_0\,r}$。由 (1) 得 $E_p = -2E_k$（virial），故 $E = E_k + E_p = -E_k$：
+
+$$
+\boxed{E_n = -\frac{Z^2}{n^2}\cdot 13.6\ \mathrm{eV}}
+$$
+
+### D7. de Broglie + 駐波 → Bohr 量子化（自然解釋）
+
+de Broglie：$\lambda = h/(mu)$。圓軌道駐波條件：
+
+$$
+2\pi r = n\lambda = \frac{nh}{mu}
+\;\Rightarrow\;
+m u r = \frac{nh}{2\pi} = n\hbar
+$$
+
+— 直接得到 Bohr 第二假設！量子化不再是「假設」，而是波動性的必然結果。
+
+### D8. Heisenberg 不確定原理（heuristic）
+
+用光子測位置：
+
+- 解析度 $\Delta q \sim \lambda$（光波長越短越精確）
+- 但光子動量 $p_\gamma = h/\lambda$ 越大，撞擊轉移的動量擾動也越大：$\Delta p \sim h/\lambda$
+
+兩者相乘：
+
+$$
+\Delta q\cdot\Delta p \sim h
+$$
+
+精確量子力學結果：$\Delta x\,\Delta p_x \ge \hbar/2$。
+
+### D9. Compton 散射角度公式
+
+能量守恆：$h\nu_i = h\nu_f + K_e$；動量守恆（$\vec p_e$ 為電子反衝動量）：
+
+$$
+\frac{h\nu_i}{c} = \frac{h\nu_f}{c}\cos\theta + p_e\cos\phi,\quad
+0 = \frac{h\nu_f}{c}\sin\theta - p_e\sin\phi
+$$
+
+消去 $\phi$（兩式平方相加）並用相對論能動量關係 $K_e = \sqrt{p_e^2c^2+m_e^2c^4}-m_ec^2$，化簡得：
+
+$$
+\boxed{\Delta\lambda = \lambda_f - \lambda_i = \frac{h}{m_ec}(1-\cos\theta)}
+$$
+
+最大位移在 $\theta = \pi$（反向散射）：$\Delta\lambda_{\max} = 2\lambda_C$。
 
 ---
 
