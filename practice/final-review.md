@@ -533,6 +533,78 @@ $$
 
 ## 重點作業詳解（**必看**）
 
+### Quiz 2 — TST / Arrhenius 對齊算 $\Delta^\ddagger H^\circ, \Delta^\ddagger S^\circ$（**ROI 最高**）
+
+**題目**：液相反應 $B + C \to P$，$T=300\ \mathrm{K}$，$A = 4.07\times 10^5\ \mathrm{dm^3\,mol^{-1}\,s^{-1}}$，$E_a = 65.43\ \mathrm{kJ/mol}$。求 $\Delta^\ddagger H^\circ, \Delta^\ddagger S^\circ$。
+
+**思路**：三式同時用 — Arrhenius、Eyring、$\Delta G = \Delta H - T\Delta S$。
+
+**Step 1**：對齊 $k$ 兩種寫法
+
+$$
+A\,e^{-E_a/RT} = \frac{k_BT}{h}\,e^{-\Delta^\ddagger G^\circ/RT}
+\;\Rightarrow\;
+\boxed{\Delta^\ddagger G^\circ = E_a + RT\ln\!\left(\frac{k_BT}{Ah}\right)}
+$$
+
+**Step 2**：液相 $\Delta^\ddagger V^\circ \approx 0$ → $\Delta^\ddagger H^\circ = E_a - RT$
+
+$$
+\Delta^\ddagger H^\circ = 65430 - (8.314)(300) = 62936\ \mathrm{J/mol}
+\;\Rightarrow\;
+\boxed{\Delta^\ddagger H^\circ \approx 62.94\ \mathrm{kJ/mol}}
+$$
+
+**Step 3**：由 $\Delta G = \Delta H - T\Delta S$ 反推
+
+$$
+\Delta^\ddagger S^\circ = -R\!\left[1 + \ln\!\frac{k_BT}{Ah}\right]
+$$
+
+代入後 $\boxed{\Delta^\ddagger S^\circ \approx -145.9\ \mathrm{J/(mol\cdot K)}}$（負值 → reactants 比 TS 更亂，bimolecular 特徵）
+
+> **必背套路**：液相用 $-RT$；氣相 bimolecular 改用 $-2RT$。然後 Eyring → $\Delta^\ddagger G^\circ$ → $\Delta^\ddagger S^\circ$。
+
+### HW3 9.39 — H₂ + I₂ → 2HI（**氣相 bimolecular，必考 +2RT**）
+
+**題目**：$T=400^\circ\mathrm{C}=673.15\ \mathrm{K}$，$k = 2.34\times 10^{-2}\ \mathrm{dm^3\,mol^{-1}\,s^{-1}}$，$E_a = 150\ \mathrm{kJ/mol}$。求 $A, \Delta^\ddagger H^\circ, \Delta^\ddagger S^\circ, \Delta^\ddagger G^\circ$。
+
+**Step 1**：$A$ 由 $k = A e^{-E_a/RT}$
+
+$$
+\ln A = \ln k + \frac{E_a}{RT}
+= \ln(2.34\times 10^{-2}) + \frac{150000}{(8.3145)(673.15)} = 23.045
+$$
+
+$$
+\boxed{A = 1.02\times 10^{10}\ \mathrm{dm^3\,mol^{-1}\,s^{-1}}}
+$$
+
+**Step 2**：氣相 bimolecular → $E_a = \Delta^\ddagger H^\circ + 2RT$（**易錯點：是 $2RT$ 不是 $RT$**）
+
+$$
+\Delta^\ddagger H^\circ = 150000 - 2(8.3145)(673.15) = 138806\ \mathrm{J/mol}
+\;\Rightarrow\;
+\boxed{\Delta^\ddagger H^\circ \approx 138.8\ \mathrm{kJ/mol}}
+$$
+
+**Step 3**：由 Eyring + $\Delta G = \Delta H - T\Delta S$
+
+$$
+\boxed{\Delta^\ddagger S^\circ \approx -76.7\ \mathrm{J\,K^{-1}\,mol^{-1}}}
+$$
+
+**Step 4**：
+
+$$
+\Delta^\ddagger G^\circ = \Delta^\ddagger H^\circ - T\Delta^\ddagger S^\circ
+= 138.8 - (673.15)(-0.0767)\times 10^{-3}
+\;\Rightarrow\;
+\boxed{\Delta^\ddagger G^\circ \approx 190.6\ \mathrm{kJ/mol}}
+$$
+
+> ⚠️ **氣相 bimolecular 的核心修正項**：$E_a = \Delta^\ddagger H^\circ + 2RT$。漏掉 $\times 2$ 答案會差 $RT \approx 5.6\ \mathrm{kJ/mol}$（673 K 時）。
+
 ### HW3 9.43 — HI 氣體分解（碰撞密度 + Arrhenius 預測 + TST 反推 $\Delta^\ddagger S^\circ$）
 
 **題目**：$N_A$ 個 HI 在 $V=1\ \mathrm{m^3}$、$T=300\ \mathrm{K}$，$d_{AA}=0.35\ \mathrm{nm}$，$E_a=184\ \mathrm{kJ/mol}$。
@@ -583,6 +655,36 @@ e^{\Delta^\ddagger S^\circ/R} = \frac{A}{e^2(k_BT/h)} = 5.72\times 10^{-4}
 $$
 
 > **必背套路**：碰撞密度 $\to$ 預測 $k \to$ 反推 $A \to \Delta^\ddagger S^\circ$。氣相 bimolecular 用 $e^2$ 不要漏！
+
+### HW4 11.13 — Pt 光電效應（**單位陷阱**）
+
+**題目**：Pt 功函數 $\phi = 5\ \mathrm{eV}$。(a) threshold $\lambda_{\max}$ ? (b) 用 $\lambda = 150\ \mathrm{nm}$，發射電子速度 ?
+
+**(a) Threshold**：$h\nu_{\max} = \phi$
+
+$$
+\lambda_{\max} = \frac{hc}{\phi}
+= \frac{(6.626\times 10^{-34})(2.998\times 10^{8})}{(5)(1.602\times 10^{-19})}
+= \boxed{2.48\times 10^{-7}\ \mathrm{m} = 248\ \mathrm{nm}}
+$$
+
+**(b) 電子速度**
+
+$$
+E_\gamma = \frac{hc}{\lambda} = 1.324\times 10^{-18}\ \mathrm{J}
+$$
+
+$$
+KE = E_\gamma - \phi = 1.324\times 10^{-18} - (5)(1.602\times 10^{-19}) = 5.23\times 10^{-19}\ \mathrm{J}
+$$
+
+$$
+u = \sqrt{\frac{2\,KE}{m_e}}
+= \sqrt{\frac{2(5.23\times 10^{-19})}{9.11\times 10^{-31}}}
+= \boxed{1.07\times 10^{6}\ \mathrm{m/s}}
+$$
+
+> ⚠️ **單位陷阱**：$\phi = 5\ \mathrm{eV}$ 必須**先乘 $1.602\times 10^{-19}$** 換成 J，才能與 $hc/\lambda$ 同單位相減！
 
 ### HW5 11.39 — Bohr 速度 + de Broglie + 駐波條件
 
