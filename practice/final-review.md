@@ -437,6 +437,95 @@ $$
 
 ---
 
+## 重點作業詳解（**必看**）
+
+### HW3 9.43 — HI 氣體分解（碰撞密度 + Arrhenius 預測 + TST 反推 $\Delta^\ddagger S^\circ$）
+
+**題目**：$N_A$ 個 HI 在 $V=1\ \mathrm{m^3}$、$T=300\ \mathrm{K}$，$d_{AA}=0.35\ \mathrm{nm}$，$E_a=184\ \mathrm{kJ/mol}$。
+求 (a) 碰撞密度 $Z_{AA}$；(b) $T=573.15\ \mathrm{K}$ 時 $k$；(c) $\Delta^\ddagger S^\circ$。
+
+**(a) 碰撞密度**：HS collision theory
+
+$$
+Z_{AA} = 2\pi d_{AA}^{2}\left(\frac{N}{V}\right)^{2}\sqrt{\frac{k_BT}{\pi m}}
+$$
+
+$m_{HI} = 0.12790/N_A = 2.124\times 10^{-25}\ \mathrm{kg}$
+$\sqrt{k_BT/\pi m} \approx 78.8\ \mathrm{m/s}$，$2\pi d^2 \approx 7.70\times 10^{-19}\ \mathrm{m^2}$，$(N/V)^2 = 3.626\times 10^{47}$
+
+$$
+\boxed{Z_{AA}\approx 2.20\times 10^{31}\ \mathrm{m^{-3}\,s^{-1}}\;@\;300\ \mathrm{K}}
+$$
+
+**(b) 換 $T = 573.15\ \mathrm{K}$**：$Z\propto\sqrt{T}$
+
+$$
+Z_{AA}(573) = Z_{AA}(300)\sqrt{573/300} \approx 3.04\times 10^{31}\ \mathrm{m^{-3}\,s^{-1}}
+$$
+
+加上 Boltzmann 因子 $e^{-E_a/RT} = e^{-38.6} \approx 1.72\times 10^{-17}$：
+
+$$
+-\frac{dC_{HI}}{dt} \approx 3.04\times 10^{31}\times 1.72\times 10^{-17} \approx 5.23\times 10^{14}\ \mathrm{m^{-3}\,s^{-1}}
+$$
+
+寫成 $-d[HI]/dt = k[HI]^2$，$[HI] = 1\ \mathrm{mol\,m^{-3}}$：
+
+$$
+k = \frac{5.23\times 10^{14}}{N_A\,[HI]^2}
+\approx 8.68\times 10^{-10}\ \mathrm{m^{3}\,mol^{-1}\,s^{-1}}
+= \boxed{8.68\times 10^{-7}\ \mathrm{dm^{3}\,mol^{-1}\,s^{-1}}}
+$$
+
+**(c) Pre-exponential factor + entropy of activation**（**bimolecular** 用 $A = e^2(k_BT/h)e^{\Delta^\ddagger S^\circ/R}$）
+
+$$
+A = k\cdot e^{E_a/RT} \approx 5.05\times 10^{10}\ \mathrm{dm^{3}\,mol^{-1}\,s^{-1}}
+$$
+
+$$
+e^{\Delta^\ddagger S^\circ/R} = \frac{A}{e^2(k_BT/h)} = 5.72\times 10^{-4}
+\Rightarrow \boxed{\Delta^\ddagger S^\circ \approx -62.1\ \mathrm{J/(K\cdot mol)}}
+$$
+
+> **必背套路**：碰撞密度 $\to$ 預測 $k \to$ 反推 $A \to \Delta^\ddagger S^\circ$。氣相 bimolecular 用 $e^2$ 不要漏！
+
+### HW5 11.39 — Bohr 速度 + de Broglie + 駐波條件
+
+**題目**：氫原子基態（$n=1, Z=1$）電子的 (1) 速度 (2) de Broglie 波長 (3) 一般 $\lambda(n)$ 公式 (4) 軌道周長 / $\lambda$ 比值。
+
+**(1) 速度**：由 Bohr 角動量量子化 $L = m u r = n\hbar$，$r_1 = a_0$：
+
+$$
+u = \frac{h}{2\pi m a_0}
+= \frac{6.626\times 10^{-34}}{2\pi(9.11\times 10^{-31})(5.292\times 10^{-11})}
+= \boxed{2.19\times 10^{6}\ \mathrm{m/s}}
+$$
+
+**(2) de Broglie 波長**：
+
+$$
+\lambda = \frac{h}{mu}
+= \frac{6.626\times 10^{-34}}{(9.11\times 10^{-31})(2.19\times 10^{6})}
+= \boxed{3.33\times 10^{-10}\ \mathrm{m} = 333\ \mathrm{pm}}
+$$
+
+**(3) 一般 $\lambda(n)$**：用 $u = nh/(2\pi m r)$ 和 $r = n^2 a_0$：
+
+$$
+\lambda = \frac{h}{mu} = \frac{2\pi r}{n} = \frac{2\pi n^2 a_0}{n} = \boxed{2\pi n\, a_0}
+$$
+
+**(4) 周長與 $\lambda$ 比**：$C = 2\pi r = 2\pi n^2 a_0$
+
+$$
+\frac{C}{\lambda} = \frac{2\pi n^2 a_0}{2\pi n\, a_0} = \boxed{n}
+$$
+
+> **物理意義**：Bohr 軌道剛好容納 $n$ 個 de Broglie 波長 — **駐波條件**。這就是 Bohr 量子化的波動本源（對應 D7 推導）。
+
+---
+
 ## 作業題型速查
 
 ### HW3（Ch.3）
